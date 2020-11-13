@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:overScrollMode="never">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:gravity="center" android:background="@color/temperature_bg_color" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.github.mikephil.charting.charts.LineChart android:id="@+id/mTemperatureLineChar" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginTop="@dimen/value20"/>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/paddingLeft20">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/alarm_text_add" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/minimum_temperature"/>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding">
+                    <TextView android:id="@+id/minimum_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="36.5" style="@style/secondary_interface_value_2"/>
+                    <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/alarm_text_add" android:id="@+id/minimum_temperature_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/celsius_unit" android:layout_marginStart="@dimen/value_padding_unit"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/alarm_text_add" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/maximum_temperature"/>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding">
+                    <TextView android:id="@+id/maximum_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="36.5" style="@style/secondary_interface_value_2"/>
+                    <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/alarm_text_add" android:id="@+id/maximum_temperature_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/celsius_unit" android:layout_marginStart="@dimen/value_padding_unit"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@+id/line_gray" android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_marginTop="@dimen/value20"/>
+        <RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.yc.pedometer.temperature.BodyTemperature android:id="@+id/mBodyTemperature" android:layout_width="match_parent" android:layout_height="25dp" android:layout_marginTop="@dimen/marginTop20" android:layout_marginStart="@dimen/setting_item_height" android:layout_marginEnd="@dimen/setting_item_height"/>
+            <RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@+id/rl_body_temperature" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ten" android:layout_weight="1" android:layout_below="@+id/mBodyTemperature">
+                <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/alarm_text_add" android:id="@+id/temperature_status_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recent_temperature" android:layout_centerHorizontal="true"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_test_result_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding" android:layout_below="@+id/temperature_status_des" android:layout_centerHorizontal="true">
+                    <TextView android:textSize="36dp" android:textColor="@color/temperature_bg_color" android:id="@+id/recent_or_ver_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="36.5"/>
+                    <TextView android:textSize="20dp" android:textColor="@color/temperature_bg_color" android:id="@+id/recent_or_ver_temperature_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/celsius_unit" android:layout_marginStart="@dimen/value_padding_unit"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_des" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_test_result_temperature">
+                    <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/alarm_text_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/back_margin_left" android:text="@string/body_temperature_des_1"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:visibility="gone" android:layout_width="match_parent" android:layout_height="200dp">
+                <TextView android:textSize="32dp" android:textColor="@color/alarm_text_add" android:id="@+id/test_status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="@string/body_temperature_testting" android:layout_centerHorizontal="true"/>
+                <TextView android:textSize="@dimen/tittle_text_size_2" android:textColor="@color/alarm_text_add" android:id="@+id/connect_status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/back_margin_left" android:text="@string/bluetoothDisconnect" android:layout_below="@+id/test_status" android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <View android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_marginTop="@dimen/padding"/>
+        <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/alarm_text_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/back_margin_left" android:text="@string/body_temperature_declaration" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+        <View android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_marginTop="@dimen/value20"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

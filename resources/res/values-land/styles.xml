@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ActionBarTwoLinePrimary">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="PopupTitleText">
+        <item name="android:textSize">@dimen/popup_title_text_size</item>
+        <item name="android:textColor">@color/popup_title_color</item>
+        <item name="android:layout_gravity">right|center_horizontal|clip_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+    <style name="ReviewControlIcon">
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:background">@drawable/bg_pressed</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">@dimen/switcher_size</item>
+        <item name="android:layout_height">@dimen/switcher_size</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="SettingPopupWindow">
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginEnd">@dimen/setting_popup_right_margin</item>
+    </style>
+    <style name="SettingPopupWindow_xlarge">
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginEnd">@dimen/setting_popup_right_margin</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+    <style name="ViewfinderLabelLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">13dp</item>
+        <item name="android:layout_marginBottom">13dp</item>
+        <item name="android:layout_marginStart">13dp</item>
+        <item name="android:layout_marginEnd">@dimen/indicator_bar_width</item>
+    </style>
+    <style name="Widget.Design.TabLayout">
+        <item name="tabGravity">1</item>
+        <item name="tabMode">1</item>
+    </style>
+    <style name="Widget.MaterialComponents.MaterialCalendar.HeaderSelection">
+        <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">@integer/mtrl_calendar_selection_text_lines</item>
+    </style>
+</resources>

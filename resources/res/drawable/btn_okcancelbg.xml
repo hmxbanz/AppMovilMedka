@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <solid android:color="@color/dialog_okcolor"/>
+    <stroke android:width="@dimen/lineHeight" android:color="@color/lineColor"/>
+    <gradient android:startColor="@color/dialog_okcolor" android:endColor="@color/dialog_okcolor" android:angle="45" android:type="linear"/>
+    <corners android:topLeftRadius="@dimen/dialogRadius" android:topRightRadius="@dimen/dialogRadius" android:bottomLeftRadius="@dimen/dialogRadius" android:bottomRightRadius="@dimen/dialogRadius"/>
+</shape>

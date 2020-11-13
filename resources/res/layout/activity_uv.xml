@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/setting_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/setting_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/ultraviolet"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/update_uv_selector" android:gravity="center" android:id="@+id/update_uv" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/update_confirm" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/setting_bg_gray" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.7">
+            <ImageView android:id="@+id/uv_ring" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/uv_ring_06" android:layout_centerHorizontal="true"/>
+            <TextView android:textSize="30dp" android:textColor="@color/gray" android:gravity="center" android:id="@+id/uv_value" android:paddingTop="50dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textSize="18dp" android:textColor="@color/gray" android:gravity="center" android:id="@+id/uv_status" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/uv_low_status"/>
+                </LinearLayout>
+                <TextView android:textColor="@color/gray" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/uv_protective_measures" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView android:gravity="center" android:id="@+id/uv_glasses_protective" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/uv_glasses_normal"/>
+                <ImageView android:gravity="center" android:id="@+id/uv_hat_protective" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/uv_hat_normal"/>
+                <ImageView android:gravity="center" android:id="@+id/uv_clothes_protective" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/uv_clothes_normal"/>
+                <ImageView android:gravity="center" android:id="@+id/uv_umbrella_protective" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/uv_umbrella_normal"/>
+                <ImageView android:gravity="center" android:id="@+id/uv_house_protective" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/uv_house_normal"/>
+            </LinearLayout>
+            <RelativeLayout android:gravity="center" android:orientation="vertical" android:background="@color/setting_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="12dp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="2dp" android:text="@string/uv_index_description"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <ScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.8" android:overScrollMode="never">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp" android:layout_weight="1" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                <TextView android:textSize="16dp" android:textColor="@color/gray" android:gravity="center" android:id="@+id/uv_current_level_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/uv_low"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

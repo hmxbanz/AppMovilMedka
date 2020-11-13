@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <Button android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/gray_text_selector" android:id="@+id/help_jump" android:background="@drawable/btn_skip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jump" android:textAllCaps="false" android:layout_alignParentEnd="true"/>
+        <ImageView android:id="@+id/iv_help_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/text_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/background_activity_permissions" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/rl_title">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_btn_back_go" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/paddingtop" android:layout_alignParentBottom="true">
+            <ImageView android:id="@+id/iv_help_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/information_btn_go_selector" android:layout_weight="1"/>
+        </LinearLayout>
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/ll_btn_back_go" android:overScrollMode="never">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/padding10">
+                <TextView android:textSize="@dimen/bigger" android:textColor="@color/black" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/can_not_connect_how_to_do"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/round_item_style">
+                    <TextView android:textSize="@dimen/big" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/vicinity"/>
+                    <TextView android:textSize="@dimen/small" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding10" android:text="@string/vicinity_content" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/round_item_style">
+                    <TextView android:textSize="@dimen/big" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/battery_exhausted"/>
+                    <TextView android:textSize="@dimen/small" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding10" android:text="@string/battery_content" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/round_item_style">
+                    <TextView android:textSize="@dimen/big" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/restart_bluetooth"/>
+                    <TextView android:textSize="@dimen/small" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding10" android:text="@string/restart_bluetooth_content" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/round_item_style">
+                    <TextView android:textSize="@dimen/big" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/have_connected_other"/>
+                    <TextView android:textSize="@dimen/small" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding10" android:text="@string/have_connected_other_content" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/round_item_style">
+                    <TextView android:textSize="@dimen/big" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/restart_phone"/>
+                    <TextView android:textSize="@dimen/small" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding10" android:text="@string/restart_phone_content" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/round_item_style">
+                    <TextView android:textSize="@dimen/big" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/open_gps"/>
+                    <TextView android:textSize="@dimen/small" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding10" android:text="@string/ble_scan_android6" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</RelativeLayout>

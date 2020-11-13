@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="30dp">
+    <TextView android:textColor="@color/text_gray" android:gravity="center_vertical" android:id="@+id/item_date" android:layout_width="match_parent" android:layout_height="30dp" android:text="20171010" android:paddingStart="@dimen/padding10"/>
+    <View android:id="@+id/divider_line" android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginBottom="@dimen/line_height" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10"/>
+</RelativeLayout>

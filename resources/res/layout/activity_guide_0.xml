@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <Button android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/gray_text_selector" android:id="@+id/gender_jump" android:background="@drawable/btn_skip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jump" android:textAllCaps="false" android:layout_alignParentEnd="true"/>
+        <ImageView android:id="@+id/iv_gender_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/text_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/personage_gender" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/text_gray" android:id="@+id/please_select_gender" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="@string/please_select_gender" android:layout_below="@+id/rl_title" android:layout_centerHorizontal="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_btn_back_go" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/paddingtop" android:layout_marginBottom="@dimen/paddingtop" android:layout_alignParentBottom="true">
+        <ImageView android:id="@+id/iv_gender_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/information_btn_go_selector"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/ll_btn_back_go" android:layout_below="@+id/please_select_gender">
+        <ImageView android:id="@+id/guide_male" android:background="@drawable/guide_male_selector" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textStyle="bold" android:textColor="#8bd3fe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="@string/personage_gender_male"/>
+        <ImageView android:id="@+id/guide_female" android:background="@drawable/guide_female_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/paddingtop"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textStyle="bold" android:textColor="#ffa9b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="@string/personage_gender_female"/>
+    </LinearLayout>
+</RelativeLayout>

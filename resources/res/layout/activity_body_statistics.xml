@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/body_fat_normal" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height" layout="@layout/body_fat_single_toolbar"/>
+    <com.google.android.material.tabs.TabLayout android:id="@+id/main_tab" android:background="@color/body_fat_normal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/rl_title" android:overScrollMode="never" app:tabIndicatorColor="@color/white" app:tabIndicatorHeight="4dp" app:tabRippleColor="@color/transparent" app:tabSelectedTextColor="@color/white" app:tabTextAppearance="@style/TextAppearance.Holo.Small" app:tabTextColor="@color/white_line" app:theme="@style/PcmTextAppearance"/>
+    <View android:id="@+id/line" android:background="@color/white" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_below="@+id/main_tab"/>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/main_viewpager" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/line" android:overScrollMode="never"/>
+</RelativeLayout>

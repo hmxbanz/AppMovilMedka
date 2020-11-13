@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="60dp" android:minHeight="60dp">
+    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/oxygen_time" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/gang_gang" android:layout_weight="1"/>
+    <RelativeLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/oxygen_value" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/gang_gang"/>
+        <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/Percent_sign" android:layout_alignBaseline="@+id/oxygen_value" android:layout_marginStart="@dimen/value_padding_unit" android:layout_toEndOf="@+id/oxygen_value"/>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/white" android:gravity="center" android:id="@+id/oxygen_status" android:background="@drawable/bp_values_level_high0_bg" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bp_status_normal" android:layout_weight="1" android:paddingStart="@dimen/ten" android:paddingEnd="@dimen/ten"/>
+    </RelativeLayout>
+</LinearLayout>

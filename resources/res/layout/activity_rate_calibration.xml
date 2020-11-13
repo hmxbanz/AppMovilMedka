@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/setting_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/setting_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.1">
+            <include android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/calibration_toolbar"/>
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:src="@drawable/rate_detection_calibration_bg" android:layout_below="@+id/rl_title" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <Button android:textSize="@dimen/text_size_1" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_detection_calibration" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginBottom="20dp" android:text="@string/calibre_imediatamente" android:layout_below="@+id/login_reason_prompt" android:layout_alignParentBottom="true" android:textAllCaps="false" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="?android:attr/borderlessButtonStyle"/>
+            <TextView android:textColor="@color/light_black" android:id="@+id/detection_and_calibration_precautions" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20dp" android:text="@string/detection_and_calibration_precautions"/>
+            <ScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5dp" android:layout_above="@+id/btn_detection_calibration" android:layout_below="@+id/detection_and_calibration_precautions" android:overScrollMode="never">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="20dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/text_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bracelet_wear_precautions"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/text_gray" android:id="@+id/textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/detection_and_calibration_precautions_01"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/text_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/detection_and_calibration_precautions_02"/>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

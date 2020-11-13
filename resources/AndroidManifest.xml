@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.yc.gloryfit" platformBuildVersionCode="29" platformBuildVersionName="10" android:versionCode="102" android:versionName="2.2.8" android:compileSdkVersion="29" android:compileSdkVersionCodename="10">
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" android:required="false"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:required="false"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" android:required="false"/>
+    <uses-permission android:name="android.permission.INTERNET" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" android:required="false"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" android:required="false"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:required="false"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" android:required="false"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG" android:required="false"/>
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" android:required="false"/>
+    <uses-permission android:name="android.permission.CAMERA" android:required="false"/>
+    <uses-permission android:name="android.permission.VIBRATE" android:required="false"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" android:required="false"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" android:required="false"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-feature android:glEsVersion="20000" android:required="true"/>
+    <supports-screens android:anyDensity="true" android:smallScreens="false" android:normalScreens="true" android:largeScreens="true"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name="com.stub.StubApp" android:launchMode="singleTask" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="true" android:usesCleartextTraffic="true" android:networkSecurityConfig="@xml/network_security_config" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true">
+        <activity android:theme="@style/AppTheme" android:label="@string/app_name" android:name="com.yc.pedometer.SplashActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.MainActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.GuideActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.PersonageActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.AboutActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.WechatActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ble.SearchDeviceActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.remind.SelectedAppActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.remind.AppManagerActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.RateDynamic" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.RateDynamicHistoryNew" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.RateStatusDescriptionActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.RateMonitorActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.Rate24HourSetting" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.UVActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.DoNotDisturbActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.CreateQRCodeActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.FirmwareActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.yc.gloryfit.wxapi.WXEntryActivity" android:exported="true" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.SitReminderActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.PushMessageActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.FriendsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yzq.zxinglibrary.android.CaptureActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ScanResultsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.QQandWxLogin" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.EmailHelper" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.fragment.Rate24HourDetail" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <service android:theme="@style/AppTheme" android:name="com.yc.pedometer.sdk.BluetoothLeService" android:enabled="true" android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="com.yc.gloryfit.action.START_SERVICE"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="YCAPPKEY" android:value="dcd05f241b65ec7b6af0bbe6f05145c2"/>
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="fa7dc0ecc21432f71c8c2e271400873c"/>
+        <service android:name="com.amap.api.location.APSService"/>
+        <meta-data android:name="UMENG_APPKEY" android:value="59156a5ef29d981c560020e5"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <provider android:name="com.facebook.FacebookContentProvider" android:exported="false" android:authorities="com.facebook.app.FacebookContentProvider170047360252253"/>
+        <service android:label="@string/app_name" android:name="com.yc.pedometer.remind.StatusbarMsgNotificationListener" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" android:exported="false">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
+        <service android:label="@string/accessibility_message_title" android:name="com.yc.pedometer.remind.MessageAccessibilityService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:exported="false" android:description="@string/accessibility_message_desc">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/accessibility_service_message_config"/>
+        </service>
+        <activity android:theme="@style/Theme.Camera" android:name="com.ute.camera.CameraActivity" android:clearTaskOnLaunch="true" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustPan">
+            <meta-data android:name="com.android.keyguard.layout" android:resource="@layout/keyguard_widget"/>
+        </activity>
+        <activity-alias android:label="@string/video_camera_label" android:name="com.android.camera.VideoCamera" android:launchMode="singleTask" android:screenOrientation="portrait" android:targetActivity="com.ute.camera.CameraActivity"/>
+        <activity-alias android:label="@string/app_name" android:name="com.android.camera.CameraLauncher" android:targetActivity="com.ute.camera.CameraActivity"/>
+        <activity android:theme="@style/Theme.Camera" android:label="@string/app_name" android:name="com.ute.camera.SecureCameraActivity" android:clearTaskOnLaunch="true" android:excludeFromRecents="true" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustPan">
+            <meta-data android:name="com.android.keyguard.layout" android:resource="@layout/keyguard_widget"/>
+        </activity>
+        <activity android:label="@string/crop_action" android:name="com.ute.camera.crop.CropActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <service android:name="com.ute.camera.MediaSaveService"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBetBH4lXO1q4D-jOEnfledMaK3Zs6OOX0"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:name="com.tencent.tauth.AuthActivity" android:exported="false" android:launchMode="singleTask" android:noHistory="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tencent1105976837"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.tencent.connect.common.AssistActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <uses-library android:name="com.google.android.maps" android:required="false"/>
+        <uses-library android:name="android.test.runner"/>
+        <service android:name="com.realsil.android.blehub.dfu.DfuService"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.UserAgreementActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.PrivacyPolicyActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.region.CountryActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.TrainingPlanActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.TrainingGoalActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.TrainCycleSetActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.TrainStartTimeSetActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.TrainSetActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.RateCalibrationActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.WeatherActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.TrunWristCalibrationActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.TurnWristActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ActivitySwitchCity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.BandInterfaceSetActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.CallRemindActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.SmsRemindActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.MoreRemindActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.GeneralSettingActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.FindPhoneActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.OffScreenTimeActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.SetUnitActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.TwentyFourHourSettingActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.feedback.Feedback_Content_New" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.feedback.Feedback_Success" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.fragment.FragmentWeekly" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ConnectHelp" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.AliPayActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.bodyfat.BodyReportActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.bodyfat.BodyTypeActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.bodyfat.BodyAgeActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.bodyfat.BodyScoreActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.bodyfat.BodyStatisticsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.bodyfat.BodyTestingActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.bodyfat.BodyHistoryActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.bodyfat.BodyEmptyActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.bodyfat.BodyDetailsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.bodyfat.BodyHelpActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.bodyfat.BodyInformationActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ecg.EcgEmptyActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ecg.EcgTestingActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ecg.EcgReportActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ecg.EcgDetailActivity" android:launchMode="singleTask" android:screenOrientation="landscape"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ecg.EcgHistoryActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ecg.EcgStatisticsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ecg.EcgHistoryDetailsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ecg.EcgInformationActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ecg.EcgHelpActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ecg.EcgAnalysisActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.SetChineseEnglishActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.BandLanguageSetting" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.PassWordActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.yc.gloryfit.pw"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.PassWordActivity_KeyBorad" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.Physiological" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.PhysiologicalSetting" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.TmallGenieActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.BackgroundPermissionsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ThirdPartyProgramActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.StepDetailsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.SleepDetailsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.RateDetailsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.BpDetailsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.HelpActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Base.Theme.AppCompat" android:name="com.theartofdev.edmodo.cropper.CropImageActivity"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.SystemSettingsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.alarm.AlarmClockActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.alarm.AlarmAddActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.event.EventActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.event.EventAddActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.DisplayDirectionActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.onlinedial.OnlineDialActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.onlinedial.CustomDialActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.HomeItemManageActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.ScanHeadsetGuiActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.temperature.TemperatureDetailsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.temperature.TemperatureSettingActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.temperature.TimePeriodActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.oxygen.OxygenDetailsActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.oxygen.OxygenSettingActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.oxygen.OxygenTimePeriodActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.DebugOnlineDialActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:name="com.yc.pedometer.sports.activity.SportGuideActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:name="com.yc.pedometer.sports.activity.SportGuideNoMapActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.sports.activity.SportMapActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.sports.activity.SportNoMapActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.sports.activity.SportSettingActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.sports.activity.ChannelActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.sports.activity.SportItemSelectActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.sports.activity.SportTargetSetActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.sports.activity.TargetEditActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.sports.activity.HeartAlarmActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.sports.activity.HistoryActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.sports.activity.HistoryDetailActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.yc.pedometer.sports.activity.GoogleSportMapActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <service android:name="com.yc.pedometer.sports.service.GoogleLocationService" android:exported="false"/>
+        <service android:name="com.yc.pedometer.sports.service.AdmapLocationService" android:exported="false"/>
+        <meta-data android:name="design_width_in_dp" android:value="360"/>
+        <meta-data android:name="design_height_in_dp" android:value="640"/>
+        <receiver android:name="com.yc.pedometer.remind.GloryFitBootReceiver" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.yc.gloryfit.action.START_SERVICE"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.PACKAGE_RESTARTED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED"/>
+                <action android:name="android.net.wifi.RSSI_CHANGED"/>
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.yc.pedometer.keepalive.KeepAliveReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_USER_PRESENT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.yc.pedometer.remind.NotificationClickReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="GloryFitNotification"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/SingleActivityStyle" android:name="com.yc.pedometer.keepalive.SinglePixelActivity" android:exported="false" android:taskAffinity="com.yc.pedometer.lockscreen" android:finishOnTaskLaunch="false" android:excludeFromRecents="true" android:launchMode="singleInstance" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize"/>
+        <service android:name="com.yc.pedometer.keepalive.CancelNoticeService" android:enabled="true" android:exported="false" android:process=":service"/>
+        <service android:name="com.yc.pedometer.keepalive.AliveJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.yc.gloryfit.fileProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <activity android:name="com.yc.pedometer.update.NotificationActivity"/>
+        <service android:name="com.yc.pedometer.update.DfuService" android:exported="false"/>
+        <service android:name="com.realsil.sdk.dfu.DfuService" android:enabled="true" android:exported="false"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:theme="@style/MediaTheme" android:name="com.twitter.sdk.android.tweetui.PlayerActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:theme="@style/MediaTheme" android:name="com.twitter.sdk.android.tweetui.GalleryActivity"/>
+        <activity android:name="com.twitter.sdk.android.tweetcomposer.ComposerActivity" android:exported="false" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustResize"/>
+        <service android:name="com.twitter.sdk.android.tweetcomposer.TweetUploadService" android:enabled="true" android:exported="false"/>
+        <activity android:name="com.twitter.sdk.android.core.identity.OAuthActivity" android:exported="false" android:excludeFromRecents="true" android:configChanges="orientation|screenSize"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+    </application>
+</manifest>

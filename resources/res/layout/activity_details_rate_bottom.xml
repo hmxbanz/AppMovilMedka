@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:gravity="center" android:id="@+id/rl_draw" android:background="@color/rate_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/rl_static_dynamic_anim" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginBottom="@dimen/value20">
+                <com.yc.pedometer.customview.CircleSeekBar android:id="@+id/circleBar" android:layout_width="160dp" android:layout_height="160dp" android:layout_centerInParent="true"/>
+                <ImageView android:id="@+id/anim" android:background="@drawable/animation1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rl_rate_normal_rate24" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.yc.pedometer.customview.RateDetailsPointChartView android:id="@+id/mRateHomeChartView" android:layout_width="match_parent" android:layout_height="220dp" app:bgcolor="@color/rate_bg_color" app:interval="50dp" app:isScroll="false" app:linecolor="@color/white" app:xylinecolor="@color/white" app:xylinewidth="0.5dp" app:xytextcolor="@color/white" app:xytextsize="@dimen/padding10"/>
+                <com.github.mikephil.charting.charts.LineChart android:id="@+id/mRateLineChar" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginTop="@dimen/value20"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/rl_current" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/paddingLeft20">
+            <ImageView android:id="@+id/heart_rate_icon_heart" android:background="@drawable/heart_rate_icon_heart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/back_margin_left"/>
+            <TextView android:id="@+id/current_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="85" android:layout_marginStart="@dimen/padding" style="@style/secondary_interface_value_1"/>
+            <RelativeLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/padding">
+                <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/alarm_text_add" android:id="@+id/current_rate_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_dynamic_status_6" android:layout_marginStart="@dimen/padding"/>
+                <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/alarm_text_add" android:gravity="center" android:id="@+id/minutes_per_minute" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/minutes_per_minute" android:layout_below="@+id/current_rate_status" android:layout_marginStart="@dimen/padding"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_total_distance" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/paddingLeft20">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/alarm_text_add" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/map_ver_rate"/>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding">
+                    <TextView android:id="@+id/ver_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="80" style="@style/secondary_interface_value_2"/>
+                    <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/alarm_text_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/minutes_per_minute" android:layout_marginStart="@dimen/value_padding_unit"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/alarm_text_add" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/map_min_rate"/>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding">
+                    <TextView android:id="@+id/min_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="80" style="@style/secondary_interface_value_2"/>
+                    <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/alarm_text_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/minutes_per_minute" android:layout_marginStart="@dimen/value_padding_unit"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/alarm_text_add" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/map_max_rate"/>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding">
+                    <TextView android:id="@+id/max_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="80" style="@style/secondary_interface_value_2"/>
+                    <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/alarm_text_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/minutes_per_minute" android:layout_marginStart="@dimen/value_padding_unit"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/layout_listview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/back_margin_left" android:layout_below="@+id/ll_total_distance">
+            <View android:id="@+id/line_gray" android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_marginTop="@dimen/value20" android:layout_below="@+id/ll_total_distance"/>
+            <RelativeLayout android:id="@+id/rl_rate_range" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height">
+                <ImageView android:id="@+id/icon_step_frg_dynamic" android:background="@drawable/heart_rate_icon_section" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/back_margin_left" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left"/>
+                <ImageView android:id="@+id/settings_right" android:background="@drawable/settings_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_24_hour_range" android:layout_centerVertical="true" android:layout_marginStart="@dimen/padding" android:layout_toStartOf="@+id/settings_right" android:layout_toEndOf="@+id/icon_step_frg_dynamic" style="@style/secondary_interface_value_5"/>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+            </RelativeLayout>
+            <com.yc.pedometer.customview.StepDayCustomListView android:id="@+id/mListView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:divider="@null" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

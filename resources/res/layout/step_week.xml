@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="20dp" android:textColor="@color/black" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/month" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+        <TextView android:textSize="@dimen/week_date_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/sunday_calendar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_date_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/monday_calendar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_date_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/tuesday_calendar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_date_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/wednesday_calendar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_date_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/thursday_calendar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_date_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/friday_calendar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_date_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/saturday_calendar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+        <TextView android:textSize="@dimen/week_day_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/sunday" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sunday" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_day_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/monday" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/monday" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_day_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/tuesday" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/tuesday" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_day_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/wednesday" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/wednesday" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_day_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/thursday" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/thursday" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_day_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/friday" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/friday" android:layout_weight="1"/>
+        <TextView android:textSize="@dimen/week_day_textsize" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@+id/saturday" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/saturday" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <com.yc.pedometer.customview.WeekStepPanelBar android:id="@+id/week_step_panel_bar" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5dp" android:layout_weight="1">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:paddingStart="16dp" android:paddingEnd="16dp">
+            <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="@dimen/second_page_big_fonts_size" android:textColor="@color/black" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/total_step" android:layout_width="match_parent" android:layout_height="match_parent" android:text="0" android:layout_weight="1"/>
+                <TextView android:textColor="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/step" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="@dimen/second_page_big_fonts_size" android:textColor="@color/black" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/quality_point" android:layout_width="match_parent" android:layout_height="match_parent" android:text="0" android:layout_weight="1"/>
+                <TextView android:textColor="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/quality_point" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:paddingStart="16dp" android:paddingEnd="16dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <TextView android:textSize="@dimen/second_page_middle_fonts_size" android:textColor="@color/black" android:gravity="center" android:id="@+id/goal_percent" android:layout_width="match_parent" android:layout_height="match_parent" android:text="0%" android:layout_weight="1"/>
+                    <TextView android:textColor="@color/black" android:gravity="center" android:id="@+id/goal_status" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/goal_done" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="15dp" android:layout_weight="1">
+                <com.yc.pedometer.customview.SaundProgressBar android:id="@+id/stepProgressbar" android:layout_width="match_parent" android:layout_height="match_parent" android:progressDrawable="@drawable/goal_progressbar_color" android:layout_weight="1" android:paddingStart="5dp" android:paddingEnd="5dp" style="?android:attr/progressBarStyleHorizontal"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+                <TextView android:textSize="@dimen/second_page_middle_fonts_size" android:textColor="@color/black" android:gravity="center" android:id="@+id/goal_value" android:layout_width="match_parent" android:layout_height="match_parent" android:text="8000" android:layout_weight="1"/>
+                <TextView android:textColor="@color/black" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/goal" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:paddingStart="16dp" android:paddingEnd="16dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+                <TextView android:textSize="@dimen/second_page_middle_fonts_size" android:textColor="@color/black" android:gravity="center" android:id="@+id/distance_value" android:layout_width="match_parent" android:layout_height="match_parent" android:text="0" android:layout_weight="1"/>
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@+id/distance_unit" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/kilometers" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView android:gravity="center" android:id="@+id/distance_description_iv" android:background="@drawable/icon_forbidden_city" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textColor="@color/black" android:gravity="center" android:id="@+id/distance_object_count" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="0"/>
+                    <TextView android:textColor="@color/black" android:gravity="center" android:id="@+id/distance_object" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/athletic_field"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:paddingStart="16dp" android:paddingEnd="16dp">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+                <TextView android:textSize="@dimen/second_page_middle_fonts_size" android:textColor="@color/black" android:gravity="center" android:id="@+id/calories_value" android:layout_width="match_parent" android:layout_height="match_parent" android:text="0" android:layout_weight="1"/>
+                <TextView android:textColor="@color/black" android:gravity="center" android:id="@+id/calories_unit" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/kilocalorie" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView android:gravity="center" android:id="@+id/calories_description_iv" android:background="@drawable/icon_ice_cream" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"/>
+                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textColor="@color/black" android:gravity="center" android:id="@+id/calories_object_count" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="0"/>
+                    <TextView android:textColor="@color/black" android:gravity="center" android:id="@+id/calories_object" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/an_ice_cream"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rlParent" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.amap.api.maps.TextureMapView android:id="@+id/map" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <ImageView android:id="@+id/ivShowLocation" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="240dp" android:src="@drawable/hisdingwei" android:layout_alignParentBottom="true" android:layout_marginEnd="5dp" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_screen_short" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/llDetail" android:background="@drawable/history_mapbg" android:layout_width="match_parent" android:layout_height="240dp" android:layout_alignParentBottom="true">
+            <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/txtTime" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp" android:text="2019-01-01 01:01"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="40sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/txtDistance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:layout_marginStart="30dp"/>
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/txtUnit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kilometer" android:layout_alignBaseline="@+id/txtDistance" android:layout_marginStart="5dp" android:layout_toEndOf="@+id/txtDistance"/>
+                <com.yc.pedometer.sports.widget.CircleImageView android:id="@+id/ivHead" android:visibility="visible" android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/head_portrait_default_male" android:layout_centerVertical="true" android:layout_marginEnd="35dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="30dp" android:layout_marginEnd="30dp">
+                <TextView android:textSize="11sp" android:textColor="#ff0fd59b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/slow" android:layout_marginStart="8dp"/>
+                <TextView android:textSize="11sp" android:textColor="#ffef735d" android:id="@+id/txtMan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quick" android:layout_marginEnd="8dp" android:layout_alignParentEnd="true"/>
+                <ImageView android:background="@drawable/history_tubiaoprogress" android:layout_width="match_parent" android:layout_height="3dp" android:layout_marginTop="5dp" android:layout_below="@+id/txtMan"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/topContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="10dp" android:layout_below="@+id/txtTime">
+                <com.yc.pedometer.sports.widget.ItemHistoryView android:id="@+id/itemDuration" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:titleColor="@color/litterGray" app:titleIcon="@drawable/time_map" app:titles="@string/map_duration" app:value="00:00:00" app:valueSize="@dimen/font16"/>
+                <com.yc.pedometer.sports.widget.ItemHistoryView android:id="@+id/itemPingjunPeisu" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:titleColor="@color/litterGray" app:titleIcon="@drawable/speed_map" app:titles="@string/avgPace" app:value="--" app:valueSize="@dimen/font16"/>
+                <com.yc.pedometer.sports.widget.ItemHistoryView android:id="@+id/itemalo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:titleColor="@color/litterGray" app:titleIcon="@drawable/kaluli_map" app:titles="@string/burn_calories" app:value="--" app:valueSize="@dimen/font16"/>
+                <com.yc.pedometer.sports.widget.ItemHistoryView android:id="@+id/itemStep" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" app:titleColor="@color/litterGray" app:titleIcon="@drawable/sport_map" app:titles="@string/step_count" app:value="0" app:valueSize="@dimen/font16"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

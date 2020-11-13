@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/dialog" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/rl_bg" android:background="@color/setting_bg_color" android:paddingTop="3dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_left" android:background="@drawable/left_arrow_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" android:layout_alignParentStart="true"/>
+        <ImageView android:id="@+id/iv_right" android:background="@drawable/right_arrow_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" android:layout_alignParentEnd="true"/>
+        <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/date_operator_ll" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:textSize="20sp" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/date_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@style/myschedule_current_month_tv"/>
+            <TextView android:textSize="20sp" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/week_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_marginStart="10dp" style="@style/myschedule_current_month_tv"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.yc.pedometer.calendar.WeekDayView android:id="@+id/mWeekDayView" android:background="@color/setting_bg_color" android:layout_width="match_parent" android:layout_height="30dp"/>
+        <com.yc.pedometer.calendar.MonthDateView android:id="@+id/monthDateView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="200dp"/>
+    </LinearLayout>
+    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+    <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textColor="@color/black" android:id="@+id/cancel" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1" android:textAllCaps="false"/>
+        <View android:background="@color/gray_line" android:layout_width="@dimen/line_height" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+        <Button android:textColor="@color/black" android:id="@+id/tv_today" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/back_to_today" android:layout_weight="1" android:textAllCaps="false"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_title" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/about" style="@style/activity_title_black"/>
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/setting_bg_gray" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/rl_title">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="90dp">
+            <ImageView android:background="@drawable/ic_launcher" android:layout_width="90dp" android:layout_height="90dp"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/setting_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/app_name"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/setting_bg_color" android:id="@+id/app_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+            <RelativeLayout android:id="@+id/about_update_app" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:layout_marginTop="30dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/update_app" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left" style="@style/settings_item_text"/>
+                <ImageView android:id="@+id/iv_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                <ImageView android:id="@+id/iv_has_new_version_apk" android:background="@drawable/new_pic" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/iv_right"/>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rl_Evaluation" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Evaluation" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left" style="@style/settings_item_text"/>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

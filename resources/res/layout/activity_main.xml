@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/bottom_layout" layout="@layout/bottom_layout"/>
+    <com.yc.pedometer.fragment.CustomViewPager android:layout_gravity="center" android:id="@+id/vp_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:flipInterval="30" android:layout_above="@+id/bottom_layout" android:layout_alignParentTop="true"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="vertical" android:id="@+id/quit_bar" android:background="@color/setting_bg_gray" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="16dp" android:textColor="@color/black" android:gravity="center" android:id="@+id/yc_quit_bar_quit" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="45dp" android:text="@string/quit"/>
+        <TextView android:textSize="16dp" android:textColor="@color/red" android:gravity="center" android:id="@+id/yc_quit_bar_trunback" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="5dp" android:text="@string/YC_Dolen_trun_in_back"/>
+        <TextView android:textSize="16dp" android:textColor="@color/black" android:gravity="center" android:id="@+id/yc_quit_bar_cancel" android:background="@drawable/selector_other_setting_item" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:layout_marginTop="5dp" android:text="@string/cancel"/>
+    </LinearLayout>
+</RelativeLayout>

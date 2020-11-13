@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:background="@drawable/friend_recycler_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="14dp">
+        <TextView android:textColor="@color/litterGray" android:id="@+id/txtTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="2019-10-10 10:00:00"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/llType" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+            <TextView android:textSize="@dimen/font16" android:textColor="@color/fontColor" android:id="@+id/txtTypeLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+            <TextView android:textSize="@dimen/font16" android:textColor="@color/fontColor" android:id="@+id/txtDistance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_marginStart="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="10dp">
+            <ImageView android:background="@drawable/his_time" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <com.yc.pedometer.sports.widget.DigitTextView android:textColor="@color/fontColor" android:id="@+id/txtDuration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00" android:layout_marginStart="5dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llStep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp">
+                <ImageView android:background="@drawable/his_step" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <com.yc.pedometer.sports.widget.DigitTextView android:textColor="@color/fontColor" android:id="@+id/txtStep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            <ImageView android:background="@drawable/his_calo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp"/>
+            <com.yc.pedometer.sports.widget.DigitTextView android:textColor="@color/fontColor" android:id="@+id/txtCalo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="40 kcal" android:layout_marginStart="5dp"/>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/llHeart" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:background="@drawable/his_heart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp"/>
+                <com.yc.pedometer.sports.widget.DigitTextView android:textColor="@color/fontColor" android:id="@+id/txtHeart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="80 bpm" android:layout_marginStart="5dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/lineColor" android:layout_width="match_parent" android:layout_height="@dimen/lineHeight" android:layout_marginEnd="14dp"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/setting_right" android:background="@drawable/history_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="14dp" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

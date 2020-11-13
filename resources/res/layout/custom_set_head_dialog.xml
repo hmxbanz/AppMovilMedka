@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/rl" android:background="@drawable/body_dialog_bg" android:layout_width="230dp" android:layout_height="120.2dp">
+        <Button android:textSize="@dimen/text_size_1" android:textColor="@color/setting_bg_color" android:id="@+id/ok" android:background="@drawable/body_dialog_confirm_bg" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:text="@string/cancel" android:layout_alignParentBottom="true" android:textAllCaps="false" style="?android:attr/borderlessButtonStyle"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="80.2dp">
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/albumon" android:background="@drawable/dialog_top_fillet_bg" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:layout_weight="1"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/photo" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:layout_weight="1"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

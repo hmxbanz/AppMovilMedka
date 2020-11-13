@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/rl" android:background="@drawable/bg_custom_card_exception_dialog" android:layout_width="230dp" android:layout_height="120dp">
+        <TextView android:textSize="16dp" android:textColor="@color/black" android:gravity="center" android:id="@+id/title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="@string/set_avatar" android:layout_centerHorizontal="true"/>
+        <View android:id="@+id/line" android:background="@color/gray_line" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginTop="7dp" android:layout_below="@+id/title"/>
+        <Button android:textSize="12dp" android:textColor="@color/white" android:layout_gravity="bottom" android:id="@+id/ok" android:background="@drawable/recharge_now_selector" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="7dp" android:layout_marginBottom="7dp" android:text="@string/hao" android:layout_alignParentBottom="true" android:textAllCaps="false" android:layout_marginStart="10dp" android:layout_marginEnd="10dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="67dp" android:layout_above="@+id/ok" android:layout_below="@+id/line" android:layout_centerInParent="true">
+            <TextView android:textSize="12dp" android:textColor="@color/black" android:gravity="center" android:id="@+id/albumon" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+            <TextView android:textSize="12dp" android:textColor="@color/black" android:gravity="center" android:id="@+id/photo" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

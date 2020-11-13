@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/rate_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="11">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="45dp">
+            <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/title_rate" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+            <com.yc.pedometer.customview.CircleSeekBar android:id="@+id/circleBar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <ImageView android:id="@+id/anim" android:background="@drawable/animation1" android:visibility="invisible" android:layout_width="400px" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+            <TextView android:textSize="35dp" android:textColor="@color/white" android:id="@+id/tv_rate_value" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="7"/>
+    </LinearLayout>
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="9">
+        <RelativeLayout android:id="@+id/layout_start" android:layout_width="match_parent" android:layout_height="40dp" android:layout_alignParentBottom="true">
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/layout_test" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textColor="@color/gray" android:gravity="center" android:id="@+id/static_test" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/static_rate_test" android:layout_weight="1"/>
+                <View android:id="@+id/midLine" android:background="@color/gray_line" android:visibility="visible" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginTop="3dp" android:layout_marginBottom="3dp"/>
+                <TextView android:textColor="@color/gray" android:gravity="center" android:id="@+id/dynamic_test" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/dynamic_rate_test" android:layout_weight="1"/>
+            </LinearLayout>
+            <TextView android:textColor="@color/rate_bg_color" android:id="@+id/testing" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_detecting" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <ListView android:id="@+id/MyListView" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@null" android:layout_above="@+id/layout_start" android:layout_alignParentTop="true" android:overScrollMode="never" android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+</LinearLayout>

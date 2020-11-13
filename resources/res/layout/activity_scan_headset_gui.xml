@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Connect_headset" android:layout_centerInParent="true" style="@style/activity_title_black"/>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/rl_title">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setting_item_height" android:src="@drawable/icon_headset_gui_scan"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setting_item_height" android:text="@string/Connect_headset_gui_title"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/back_margin_left">
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/white" android:gravity="center" android:background="@drawable/headset_serial_number_bg" android:layout_width="18dp" android:layout_height="18dp" android:text="1"/>
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/text_black" android:id="@+id/Connect_headset_gui_comment_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Connect_headset_gui_comment_1" android:layout_marginStart="@dimen/padding"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/back_margin_left">
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/white" android:gravity="center" android:background="@drawable/headset_serial_number_bg" android:layout_width="18dp" android:layout_height="18dp" android:text="2"/>
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Connect_headset_gui_comment_2" android:layout_marginStart="@dimen/padding"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/back_margin_left">
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/white" android:gravity="center" android:background="@drawable/headset_serial_number_bg" android:layout_width="18dp" android:layout_height="18dp" android:text="3"/>
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Connect_headset_gui_comment_3" android:layout_marginStart="@dimen/padding"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/back_margin_left">
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/white" android:gravity="center" android:background="@drawable/headset_serial_number_bg" android:layout_width="18dp" android:layout_height="18dp" android:text="4"/>
+                <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Connect_headset_gui_comment_4" android:layout_marginStart="@dimen/padding"/>
+            </LinearLayout>
+            <Button android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:id="@+id/Start_pairing" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:layout_margin="@dimen/setting_item_height" android:text="@string/Start_pairing" android:layout_weight="1" android:textAllCaps="false" style="?android:attr/borderlessButtonStyle"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

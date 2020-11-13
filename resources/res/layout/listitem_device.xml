@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="60dp">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <TextView android:textSize="17dp" android:textColor="@color/black" android:id="@+id/device_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/app_name" android:textDirection="locale" android:layout_marginStart="@dimen/back_margin_left"/>
+        <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_gray" android:id="@+id/device_mac" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:layout_below="@+id/device_name" android:textDirection="locale" android:layout_marginStart="@dimen/back_margin_left"/>
+    </RelativeLayout>
+    <ImageView android:id="@+id/device_rssi_signal" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="20dp" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <SurfaceView android:id="@+id/preview_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <RelativeLayout android:layout_gravity="top" android:id="@+id/rl_title" android:background="@color/map_record_bg" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/scan_qr_code" android:layout_centerInParent="true"/>
+        <ImageView android:id="@+id/album" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_album_selector" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <com.yzq.zxinglibrary.view.ViewfinderView android:id="@+id/viewfinder_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/rl_title"/>
+</RelativeLayout>

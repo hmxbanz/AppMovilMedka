@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.yc.pedometer.sports.widget.DigitTextView android:textSize="44sp" android:textColor="@color/fontColor" android:id="@+id/txtValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5.00"/>
+        <TextView android:textSize="@dimen/font13" android:textColor="@color/litterGray" android:id="@+id/txtUnit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kilometer" android:layout_alignBaseline="@+id/txtValue" android:layout_marginStart="2dp" android:layout_toEndOf="@+id/txtValue"/>
+    </RelativeLayout>
+    <TextView android:textSize="12sp" android:gravity="center" android:id="@+id/txtModifyInfo" android:background="@drawable/custom" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/customize" android:paddingStart="18dp" android:paddingEnd="18dp"/>
+</LinearLayout>

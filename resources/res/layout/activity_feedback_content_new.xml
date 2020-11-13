@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/top" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/feedback" style="@style/activity_title_black"/>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <ScrollView android:background="@color/setting_bg_gray" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/top" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30dp">
+                <TextView android:textSize="@dimen/feedback_text_size_small" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_title_1" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp"/>
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="80dp">
+                <RelativeLayout android:gravity="center_vertical" android:id="@+id/rl_dyfuction" android:layout_width="match_parent" android:layout_height="40dp">
+                    <TextView android:textSize="@dimen/feedback_text_size_big" android:textColor="@color/text_black" android:id="@+id/tv1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_title_2" android:layout_centerVertical="true" android:layout_marginStart="8dp"/>
+                    <TextView android:textSize="@dimen/feedback_text_size_big" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_content_1" android:layout_centerVertical="true" android:layout_marginStart="8dp" android:layout_toEndOf="@+id/tv1"/>
+                    <ImageView android:id="@+id/iv_dyfunction" android:background="@drawable/icon_fb_select" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10dp" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp"/>
+                <RelativeLayout android:gravity="center_vertical" android:id="@+id/rl_other" android:layout_width="match_parent" android:layout_height="40dp">
+                    <TextView android:textSize="@dimen/feedback_text_size_big" android:textColor="@color/text_black" android:id="@+id/tv2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_title_3" android:layout_centerVertical="true" android:layout_marginStart="8dp"/>
+                    <TextView android:textSize="@dimen/feedback_text_size_big" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_content_2" android:layout_centerVertical="true" android:layout_marginStart="8dp" android:layout_toEndOf="@+id/tv2"/>
+                    <ImageView android:id="@+id/iv_other" android:background="@drawable/icon_fb_unselect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10dp" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30dp">
+                <TextView android:textSize="@dimen/feedback_text_size_small" android:textColor="@color/text_black" android:id="@+id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_title_4" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp"/>
+            <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="120dp">
+                <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <EditText android:textSize="@dimen/feedback_text_size_small" android:textColor="@color/text_gray" android:textColorHint="@color/text_gray" android:id="@+id/et_content" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:hint="@string/fb_content_3" android:layout_marginStart="5dp" android:layout_marginEnd="5dp"/>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30dp">
+                <TextView android:textSize="@dimen/feedback_text_size_small" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_title_5" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:visibility="visible" android:layout_width="match_parent" android:layout_height="100dp">
+                <FrameLayout android:id="@+id/fl_1" android:visibility="visible" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="10dp" android:layout_weight="1">
+                    <ImageView android:id="@+id/pic_1" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/icon_fb_pic"/>
+                    <ImageView android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/pic_delete_1" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_fb_delete"/>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/fl_2" android:visibility="invisible" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="10dp" android:layout_weight="1">
+                    <ImageView android:id="@+id/pic_2" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/icon_fb_pic"/>
+                    <ImageView android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/pic_delete_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_fb_delete"/>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/fl_3" android:visibility="invisible" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="10dp" android:layout_weight="1">
+                    <ImageView android:id="@+id/pic_3" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/icon_fb_pic"/>
+                    <ImageView android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/pic_delete_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_fb_delete"/>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/fl_4" android:visibility="invisible" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="10dp" android:layout_weight="1">
+                    <ImageView android:id="@+id/pic_4" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/icon_fb_pic"/>
+                    <ImageView android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/pic_delete_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_fb_delete"/>
+                </FrameLayout>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30dp">
+                <TextView android:textSize="@dimen/feedback_text_size_small" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_title_6" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="40dp">
+                <EditText android:textSize="@dimen/feedback_text_size_small" android:textColor="@color/text_gray" android:id="@+id/et_contack" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/fb_content_4" android:layout_marginStart="5dp" android:layout_marginEnd="5dp"/>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp"/>
+            <Button android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/setting_bg_color" android:gravity="center" android:id="@+id/submit_feedback" android:background="@drawable/fillet_button_light_green_selector" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:layout_marginTop="@dimen/paddingtopmin" android:layout_marginBottom="@dimen/paddingtopmin" android:text="@string/fb_submit" android:layout_centerHorizontal="true" android:textAllCaps="false" android:layout_marginStart="40dp" android:layout_marginEnd="40dp" style="?android:attr/borderlessButtonStyle"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

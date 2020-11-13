@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/pw_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/text_gray" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/app_name"/>
+    </RelativeLayout>
+    <TextView android:textSize="18dp" android:textColor="@color/text_gray" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/please_input_pw"/>
+    <TextView android:textSize="15dp" android:textColor="@color/text_gray" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/pw_has_display"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="20dp">
+        <ImageView android:id="@+id/iv_1" android:background="@drawable/page_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <ImageView android:id="@+id/iv_2" android:background="@drawable/page_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20dp"/>
+        <ImageView android:id="@+id/iv_3" android:background="@drawable/page_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20dp"/>
+        <ImageView android:id="@+id/iv_4" android:background="@drawable/page_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20dp"/>
+    </LinearLayout>
+    <TextView android:textSize="15dp" android:textColor="@color/red" android:gravity="center_horizontal" android:id="@+id/tv_error" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:text="@string/pw_error"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/padding10" android:layout_marginStart="@dimen/padding20" android:layout_marginEnd="@dimen/padding20">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/key_board_text_size" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_1" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:text="1" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="@dimen/key_board_text_size" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_2" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:text="2" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="@dimen/key_board_text_size" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_3" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:text="3" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <View android:background="@color/red" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="@dimen/key_board_text_size" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_4" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:text="4" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="@dimen/key_board_text_size" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_5" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:text="5" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="@dimen/key_board_text_size" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_6" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:text="6" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <View android:background="@color/red" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="@dimen/key_board_text_size" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_7" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:text="7" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="@dimen/key_board_text_size" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_8" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:text="8" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="@dimen/key_board_text_size" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_9" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:text="9" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <View android:background="@color/red" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="20dp" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_cancel" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:text="@string/cancel" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="@dimen/key_board_text_size" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/tv_0" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:text="0" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <RelativeLayout android:id="@+id/rl_del" android:background="@drawable/key_board_bt_selector" android:layout_width="@dimen/key_board_bt_direct" android:layout_height="@dimen/key_board_bt_direct" android:layout_centerInParent="true">
+                    <ImageView android:background="@drawable/icon_delete_pw" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <View android:background="@color/red" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp"/>
+    </LinearLayout>
+</LinearLayout>

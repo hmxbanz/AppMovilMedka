@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/conversation_options_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/layout_business_card" android:background="@drawable/friends_option_item_selector" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/icon_business_card" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_business_card" android:scaleType="fitCenter" android:layout_marginStart="7dp"/>
+        <TextView android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_business_card" android:layout_marginStart="5dp" android:layout_marginEnd="7dp"/>
+    </LinearLayout>
+    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp" android:layout_marginStart="7dp" android:layout_marginEnd="7dp"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/layout_message" android:background="@drawable/friends_option_item_selector" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/icon_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_message" android:scaleType="fitCenter" android:layout_marginStart="7dp"/>
+        <TextView android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friends_message" android:layout_marginStart="5dp" android:layout_marginEnd="7dp"/>
+    </LinearLayout>
+    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp" android:layout_marginStart="7dp" android:layout_marginEnd="7dp"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/layout_add_friends" android:background="@drawable/friends_option_item_selector" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_add_friends" android:scaleType="fitCenter" android:layout_marginStart="7dp"/>
+        <TextView android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_friends" android:layout_marginStart="5dp" android:layout_marginEnd="7dp"/>
+    </LinearLayout>
+</LinearLayout>

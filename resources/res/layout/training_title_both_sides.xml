@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:id="@+id/my_toolbar" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/goal" android:layout_centerInParent="true"/>
+        <ImageView android:id="@+id/settings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_friends_settings_selector" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

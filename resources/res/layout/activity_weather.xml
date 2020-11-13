@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yc.pedometer.customview.VpSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/swipe_container" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:id="@+id/scrollView" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/rl_weather_bg" android:background="@drawable/weather_day_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/training_title_both_sides"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_weather_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/rl_title" android:layout_marginStart="@dimen/back_margin_left">
+                    <ImageView android:id="@+id/icon_weather_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_weather_address"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/white" android:id="@+id/weather_address" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_weather_update_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/ll_weather_address" android:layout_marginStart="@dimen/back_margin_left">
+                    <TextView android:textSize="@dimen/small" android:textColor="@color/white_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/updated_to" android:layout_marginStart="5dp"/>
+                    <TextView android:textSize="@dimen/small" android:textColor="@color/white_line" android:id="@+id/weather_update_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_marginStart="5dp"/>
+                </LinearLayout>
+                <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/rl_weather_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/ll_weather_update_time" android:layout_marginStart="@dimen/back_margin_left">
+                    <TextView android:textSize="100sp" android:textColor="@color/white" android:id="@+id/temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--"/>
+                    <TextView android:textSize="20sp" android:textColor="@color/white_line" android:id="@+id/climate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBaseline="@+id/temperature" android:layout_toEndOf="@+id/temperature"/>
+                </RelativeLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_weather_parameter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/rl_weather_temperature" android:layout_marginStart="@dimen/back_margin_left">
+                    <TextView android:textColor="@color/white_line" android:gravity="center" android:id="@+id/pm2_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:drawableTop="@drawable/weather_pm2_5" android:layout_marginStart="5dp"/>
+                    <TextView android:textColor="@color/white_line" android:gravity="center" android:id="@+id/humidity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:drawableTop="@drawable/icon_weather_humidity" android:layout_marginStart="30dp"/>
+                    <TextView android:textColor="@color/white_line" android:gravity="center" android:id="@+id/uv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:drawableTop="@drawable/weather_uv" android:layout_marginStart="30dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <com.yc.pedometer.customview.NoScrollListview android:id="@+id/MyListView" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentTop="true" android:overScrollMode="never" android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</com.yc.pedometer.customview.VpSwipeRefreshLayout>

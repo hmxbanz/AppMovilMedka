@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ecg_normal" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_title" android:background="@color/ecg_normal" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+            <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ECG" android:layout_centerInParent="true"/>
+            <TextView android:textColor="@color/white" android:id="@+id/share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ECG_Export" android:layout_centerVertical="true" android:layout_marginEnd="10dp" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="1dp">
+            <SeekBar android:id="@+id/ecg_seekbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:layout_alignParentBottom="true" style="@style/CustomSeekbarStyle"/>
+            <RelativeLayout android:id="@+id/rl_content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/ecg_seekbar">
+                <com.yc.pedometer.ecg.EcgDetailView android:id="@+id/ecg_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/ecg_normal" android:id="@+id/detail_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <LinearLayout android:orientation="vertical" android:background="@color/ecg_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5dp">
+                        <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/white" android:id="@+id/ecg_who" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2dp" android:text="@string/ECG_Person_Me"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_rate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="30dp" android:layout_alignParentBottom="true" android:layout_marginStart="10dp" android:layout_toStartOf="@+id/ll_speed" android:layout_alignParentStart="true">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/map_ver_rate"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/ecg_rate_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="90" android:layout_marginStart="3dp"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ECG_HR_Unit_BeatsPerMinute" android:layout_marginStart="3dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_gain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30dp" android:layout_alignParentBottom="true" android:layout_marginEnd="10dp" android:layout_alignParentEnd="true">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ECG_Gain" android:layout_marginEnd="2dp"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/ecg_normal" android:id="@+id/gain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10mm/mv"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_speed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30dp" android:layout_alignParentBottom="true" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/ll_gain">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ECG_Speed" android:layout_marginEnd="2dp"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/ecg_normal" android:id="@+id/speed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25mm/s"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

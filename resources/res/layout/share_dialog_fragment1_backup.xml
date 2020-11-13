@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="@dimen/padding20" android:layout_marginEnd="@dimen/padding20">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_pinterest" android:background="@drawable/selector_other_setting_item" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_pinterest_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_Pinterest_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_linkedin" android:background="@drawable/selector_other_setting_item" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_linkedin_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_LinkedIn_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_kakaotalk" android:background="@drawable/selector_other_setting_item" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_kakaotalk_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_KakaoTalk_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_googleplus" android:background="@drawable/selector_other_setting_item" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_googleplus_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_GooglePlus_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_flickr" android:background="@drawable/selector_other_setting_item" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_flickr_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_Flickr_remind"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="@dimen/padding20" android:layout_marginEnd="@dimen/padding20">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_more" android:background="@drawable/selector_other_setting_item" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_share_more" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_others"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_wechat_moments" android:background="@drawable/selector_other_setting_item" android:padding="5dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_wechat_moments" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wechat_moments"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_qq" android:background="@drawable/selector_other_setting_item" android:padding="5dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_qq_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_qq_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_line" android:background="@drawable/selector_other_setting_item" android:padding="5dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_line_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_line_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_vkontakte" android:background="@drawable/selector_other_setting_item" android:padding="5dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_vkontakte_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_VKontakte_remind"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

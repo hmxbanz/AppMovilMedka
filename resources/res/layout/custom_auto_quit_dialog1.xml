@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/custom_auto_quit_dialog" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_margin_startEnd" android:layout_marginBottom="@dimen/dialog_margin_startEnd" android:text="@string/network_disable" android:layout_centerInParent="true" android:layout_marginStart="13dp" android:layout_marginEnd="13dp"/>
+    </RelativeLayout>
+</FrameLayout>

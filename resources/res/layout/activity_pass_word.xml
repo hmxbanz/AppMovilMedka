@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/setting_bg_gray" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:background="@color/setting_bg_color" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/input_right_password"/>
+    </RelativeLayout>
+    <TextView android:textSize="18dp" android:textColor="@color/text_black" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:text="确认您的密码"/>
+    <EditText android:gravity="center" android:id="@+id/in_pw" android:background="@drawable/pass_word_edt_selector" android:layout_width="match_parent" android:layout_height="40dp" android:maxLength="4" android:inputType="numberPassword" android:layout_marginStart="30dp" android:layout_marginEnd="30dp"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+        <Button android:textSize="18dp" android:textColor="@color/text_black" android:id="@+id/cancel" android:background="@drawable/pass_word_button_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1" android:layout_marginEnd="5dp"/>
+        <Button android:textSize="18dp" android:textColor="@color/text_black" android:id="@+id/confirm" android:background="@drawable/pass_word_button_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/got_it" android:layout_weight="1" android:layout_marginStart="5dp"/>
+    </LinearLayout>
+</LinearLayout>

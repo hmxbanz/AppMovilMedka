@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/setting_bg_gray" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+            <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/text_black" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/system_unit" android:layout_centerInParent="true"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_metric" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:layout_marginTop="@dimen/thick_dividing_line_height">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_metric" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left" style="@style/settings_item_text"/>
+            <ImageView android:id="@+id/iv_metric" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_inch" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:layout_marginTop="@dimen/thick_dividing_line_height">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_inch" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left" style="@style/settings_item_text"/>
+            <ImageView android:id="@+id/iv_inch" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

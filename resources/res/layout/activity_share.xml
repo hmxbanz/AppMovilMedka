@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/share_content" android:background="@drawable/login_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/title_bar" android:layout_width="match_parent" android:layout_height="40dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.8">
+            <com.yc.pedometer.customview.CircleImageView android:gravity="center" android:layout_gravity="center" android:id="@+id/mRoundImageView" android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/head_portrait_default_male"/>
+            <TextView android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/share_name" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="5dp" android:text="@string/personage_name" android:layout_weight="2"/>
+            <TextView android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/share_calendar" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginBottom="5dp" android:text="2016-02-02" android:layout_weight="2"/>
+        </LinearLayout>
+        <Button android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:textAllCaps="false" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="14dp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/step_count" android:layout_weight="2"/>
+                <TextView android:textSize="24dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/share_step_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10086" android:layout_weight="1"/>
+                <ImageView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/share_feet" android:layout_weight="2"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="40dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/share_distance" android:layout_weight="1"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                        <TextView android:textSize="24dp" android:textColor="@color/white" android:id="@+id/share_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5.2"/>
+                        <TextView android:textColor="@color/white" android:id="@+id/unit_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <Button android:background="@color/white" android:layout_width="@dimen/line_height" android:layout_height="match_parent" android:layout_marginBottom="20dp" android:textAllCaps="false"/>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="40dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/share_calorias" android:layout_weight="1"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                        <TextView android:textSize="24dp" android:textColor="@color/white" android:id="@+id/share_calorias" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="200"/>
+                        <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kilocalorie" android:layout_marginStart="10dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="50dp">
+                <ImageView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/logo_dayday"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="#d9d9d9" android:layout_width="match_parent" android:layout_height="50dp" android:layout_alignParentBottom="true" android:layout_centerVertical="true">
+        <ImageView android:layout_gravity="center" android:id="@+id/share_qq" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/share_qq_selector" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center" android:id="@+id/share_qzone" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/share_qq_zone_selector" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center" android:id="@+id/share_wechat" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/share_wechat_selector" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center" android:id="@+id/share_moments" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/share_wechat_moments_selector" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center" android:id="@+id/share_more" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/share_more2_selector" android:layout_weight="1"/>
+    </LinearLayout>
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="40dp">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="20dp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/share"/>
+    </RelativeLayout>
+</RelativeLayout>

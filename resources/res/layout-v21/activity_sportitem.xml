@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/map_top_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.yc.pedometer.sports.widget.AppToolBar android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" app:barTitle="@string/currentShow" app:leftRes="@drawable/icon_back_white_selector"/>
+    <com.yc.pedometer.sports.widget.DigitTextView android:textSize="80sp" android:textColor="@color/white" android:id="@+id/txtValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="120dp" android:text="80" android:layout_centerHorizontal="true" android:transitionName="share"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="30dp" android:layout_below="@+id/txtValue"/>
+</RelativeLayout>

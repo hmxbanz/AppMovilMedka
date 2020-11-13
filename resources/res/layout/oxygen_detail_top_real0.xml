@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="horizontal" android:background="@color/oxygen_bg_color" android:layout_width="match_parent" android:layout_height="240dp" android:layout_below="@+id/rl_title">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:textSize="22dp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:textSize="74dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@+id/real_value" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/gang_gang"/>
+        <TextView android:textSize="22dp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="%"/>
+    </LinearLayout>
+    <View android:background="@color/white" android:layout_width="0.5dp" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="200dp" android:layout_weight="1">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1.8">
+            <TextView android:textSize="22dp" android:textColor="@color/white" android:id="@+id/test_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gang_gang"/>
+            <TextView android:textSize="14dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ten" android:text="@string/rate_dynamic_test_time"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/rate_dynamic_real_ladder" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="3.2">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:visibility="invisible" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1.5"/>
+                <TextView android:textSize="22dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/value_lowest" android:layout_width="match_parent" android:layout_height="0dp" android:text="@string/gang_gang" android:layout_weight="1"/>
+                <TextView android:textSize="12dp" android:textColor="@color/white" android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="0dp" android:text="@string/lowest" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="22dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/value_average" android:layout_width="match_parent" android:layout_height="0dp" android:text="@string/gang_gang" android:layout_weight="3"/>
+                <TextView android:textSize="12dp" android:textColor="@color/white" android:gravity="top|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/average" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="22dp" android:textColor="@color/white" android:gravity="top|center_vertical|center_horizontal|center" android:id="@+id/value_highest" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginBottom="@dimen/ten" android:text="@string/gang_gang" android:layout_weight="2"/>
+                <TextView android:textSize="12dp" android:textColor="@color/white" android:gravity="top|center_vertical|center_horizontal|center" android:layout_width="match_parent" android:layout_height="0dp" android:text="@string/highest" android:layout_weight="3"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

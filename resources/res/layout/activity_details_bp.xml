@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/rl_all" android:background="@color/bp_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_title" android:background="@color/bp_bg_color" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/blood_pressure" android:layout_centerInParent="true"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerInParent="true" android:layout_alignParentEnd="true">
+            <ImageView android:id="@+id/share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/share_selector" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left"/>
+            <ImageView android:id="@+id/showDateDialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_calendar_selector" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_calendar" android:layout_width="match_parent" android:layout_height="40dp" android:layout_below="@+id/rl_title">
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:id="@+id/tv_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2019/07/11" android:layout_centerInParent="true"/>
+        <ImageView android:id="@+id/calendar_back" android:paddingTop="@dimen/padding" android:paddingBottom="@dimen/padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/calendar_back_bp_selector" android:layout_centerVertical="true" android:paddingStart="@dimen/value20" android:paddingEnd="@dimen/value20" android:layout_toStartOf="@+id/tv_calendar"/>
+        <ImageView android:id="@+id/calendar_ahead" android:paddingTop="@dimen/padding" android:paddingBottom="@dimen/padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/calendar_ahead_bp_selector" android:layout_centerVertical="true" android:paddingStart="@dimen/value20" android:paddingEnd="@dimen/value20" android:layout_toEndOf="@+id/tv_calendar"/>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView android:orientation="vertical" android:background="@color/white" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/layout_start" android:layout_below="@+id/rl_calendar" android:overScrollMode="never">
+        <RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:gravity="center" android:id="@+id/rl_draw" android:background="@color/bp_bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+                <RelativeLayout android:id="@+id/rl_static_dynamic_anim" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginBottom="@dimen/value20">
+                    <com.yc.pedometer.customview.CircleSeekBar android:id="@+id/circleBar" android:layout_width="160dp" android:layout_height="160dp" android:layout_centerInParent="true"/>
+                    <ImageView android:id="@+id/anim" android:background="@drawable/animation1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <com.yc.pedometer.customview.BpChartView android:id="@+id/mBpChartView" android:layout_width="match_parent" android:layout_height="220dp" app:bgcolor="@color/bp_bg_color" app:interval="50dp" app:isScroll="false" app:linecolor="@color/white" app:xylinecolor="@color/white" app:xylinewidth="0.5dp" app:xytextcolor="@color/white" app:xytextsize="12dp"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_total_distance" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/paddingLeft20" android:layout_below="@+id/rl_draw">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/alarm_text_add" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bp_high_pressure"/>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:gravity="center" android:id="@+id/bp_high_pressure" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100" style="@style/secondary_interface_value_2"/>
+                        <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/alarm_text_add" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bp_value_units" android:layout_marginStart="@dimen/value_padding_unit"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/alarm_text_add" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bp_low_pressure"/>
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:gravity="center" android:id="@+id/bp_low_pressure" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="80" style="@style/secondary_interface_value_2"/>
+                        <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/alarm_text_add" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bp_value_units" android:layout_marginStart="@dimen/value_padding_unit"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_listview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/back_margin_left" android:layout_below="@+id/ll_total_distance">
+                <View android:id="@+id/line_gray" android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_marginTop="@dimen/value20" android:layout_below="@+id/ll_total_distance"/>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/third_item_height" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left">
+                    <ImageView android:id="@+id/icon_step_frg_dynamic" android:background="@drawable/blood_pressure_icon_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/back_margin_left" android:layout_centerVertical="true"/>
+                    <TextView android:textSize="@dimen/step_text_size_big" android:textColor="@color/text_black" android:id="@+id/today_dynamic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/today_dynamic" android:layout_centerVertical="true" android:layout_marginStart="@dimen/padding" android:layout_toEndOf="@+id/icon_step_frg_dynamic"/>
+                </RelativeLayout>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="start" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bp_status" android:layout_weight="1" android:layout_marginStart="@dimen/back_margin_left"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bp_high_pressure" android:layout_weight="1"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bp_low_pressure" android:layout_weight="1"/>
+                </LinearLayout>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+                <com.yc.pedometer.customview.StepDayCustomListView android:id="@+id/MyListView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:divider="@null"/>
+                <RelativeLayout android:layout_gravity="center" android:id="@+id/rl_more" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/bp_bg_color" android:id="@+id/more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_others" android:layout_centerVertical="true"/>
+                    <ImageView android:background="@drawable/bp_count_btn_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/padding" android:layout_toEndOf="@+id/more"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout android:id="@+id/layout_start" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height" android:layout_alignParentBottom="true">
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+        <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/alarm_text_add" android:id="@+id/bp_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/start_test" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>

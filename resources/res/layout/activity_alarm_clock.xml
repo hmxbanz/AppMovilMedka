@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_title" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:gravity="center" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/smart_alarm_clock" style="@style/activity_title_black"/>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_no_alarm" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@+id/icon_no_alarm" android:background="@drawable/icon_no_alarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true"/>
+        <TextView android:textSize="@dimen/alarm_text_size_2" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/alarm_text_size_1" android:text="@string/alarm_add_content_1" android:layout_below="@+id/icon_no_alarm" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/rl_bottom" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <TextView android:textSize="@dimen/alarm_text_size_1" android:textColor="@color/alarm_text_add" android:gravity="center" android:id="@+id/alarm_delete" android:padding="@dimen/padding" android:visibility="visible" android:layout_width="106dp" android:layout_height="wrap_content" android:text="@string/train_delete" android:drawableTop="@drawable/icon_alarm_delete"/>
+            <TextView android:textSize="@dimen/alarm_text_size_1" android:textColor="@color/alarm_text_add" android:gravity="center" android:id="@+id/alarm_add" android:padding="@dimen/padding" android:visibility="visible" android:layout_width="106dp" android:layout_height="wrap_content" android:text="@string/alarm_add" android:drawableTop="@drawable/icon_alarm_add" android:layout_toEndOf="@+id/alarm_delete"/>
+        </LinearLayout>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+    </RelativeLayout>
+    <ListView android:id="@+id/mListView" android:layout_width="match_parent" android:layout_height="wrap_content" android:listSelector="@drawable/selector_other_setting_item" android:divider="@null" android:layout_above="@+id/rl_bottom" android:layout_below="@+id/rl_title"/>
+</RelativeLayout>

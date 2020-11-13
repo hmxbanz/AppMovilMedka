@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/setting_bg_gray" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+            <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/time_period" style="@style/activity_title_black"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height">
+            <ImageView android:id="@+id/time_period_switch" android:background="@drawable/switch_on" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/time_period_switch">
+                <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/time_period"/>
+                <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/time_period_des"/>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_start_time" android:background="@drawable/selector_other_setting_item" android:visibility="visible" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/tv_start_time_am_pm" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/am"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/tv_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="08:00" android:layout_marginStart="3dp"/>
+                </LinearLayout>
+                <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="@string/remind_start_time"/>
+            </LinearLayout>
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_end_time" android:background="@drawable/selector_other_setting_item" android:visibility="visible" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/tv_end_time_am_pm" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/am"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/tv_end_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="21:00" android:layout_marginStart="3dp"/>
+                </LinearLayout>
+                <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="@string/remind_end_time"/>
+            </LinearLayout>
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

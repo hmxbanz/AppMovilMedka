@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/body_fat_normal" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/body_fat_single_toolbar"/>
+    <ListView android:id="@+id/MyListView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@null" android:layout_below="@+id/rl_title"/>
+    <LinearLayout android:gravity="center" android:id="@+id/history_no_data" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:background="@drawable/history_no_data_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="70dp"/>
+    </LinearLayout>
+</RelativeLayout>

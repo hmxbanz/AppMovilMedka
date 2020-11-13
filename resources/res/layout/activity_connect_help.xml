@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/help_centre" android:layout_centerHorizontal="true" style="@style/activity_title_black"/>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <Button android:textSize="@dimen/text_size_1" android:textColor="@color/white" android:id="@+id/problem_solving_retry" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:layout_margin="@dimen/setting_item_height" android:text="@string/connect_help_6" android:layout_alignParentBottom="true" android:textAllCaps="false" style="?android:attr/borderlessButtonStyle"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/problem_solving_retry" android:layout_below="@+id/rl_title">
+        <RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="@dimen/back_margin_left" android:paddingEnd="@dimen/back_margin_left">
+            <RelativeLayout android:orientation="horizontal" android:id="@+id/connect_help_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/title_item_height">
+                <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/connect_help_0" android:layout_centerInParent="true" style="@style/activity_title_black"/>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true" android:paddingStart="@dimen/back_margin_left" android:paddingEnd="@dimen/back_margin_left"/>
+            </RelativeLayout>
+            <TextView android:textSize="14dp" android:textColor="@color/alarm_text_add" android:id="@+id/connect_help_1" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/connect_help_1" android:layout_below="@+id/connect_help_0"/>
+            <TextView android:textSize="14dp" android:textColor="@color/alarm_text_add" android:id="@+id/connect_help_2" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/connect_help_2" android:layout_below="@+id/connect_help_1"/>
+            <TextView android:textSize="14dp" android:textColor="@color/alarm_text_add" android:id="@+id/connect_help_3" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/connect_help_3" android:layout_below="@+id/connect_help_2"/>
+            <TextView android:textSize="14dp" android:textColor="@color/alarm_text_add" android:id="@+id/connect_help_4" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/connect_help_4" android:layout_below="@+id/connect_help_3"/>
+            <TextView android:textSize="14dp" android:textColor="@color/alarm_text_add" android:id="@+id/connect_help_5" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/connect_help_5" android:layout_below="@+id/connect_help_4"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="pref_camera_timer_entry">
+        <item quantity="one">1 Sekunde</item>
+        <item quantity="other">%d Sekunden</item>
+    </plurals>
+    <plurals name="tw__time_hours">
+        <item quantity="one">1 Std.</item>
+        <item quantity="other">%d Std.</item>
+    </plurals>
+    <plurals name="tw__time_mins">
+        <item quantity="one">1 Min.</item>
+        <item quantity="other">%d Min.</item>
+    </plurals>
+    <plurals name="tw__time_secs">
+        <item quantity="one">1 Sek.</item>
+        <item quantity="other">%d Sek.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/setting_bg_gray" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:gravity="center" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="60dp" android:text="@string/select_phone_Brand" android:layout_centerHorizontal="true" style="@style/background_activity_title"/>
+    <RelativeLayout android:id="@+id/rl_mi" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="5dp">
+        <TextView android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/phone_mi" android:layout_centerVertical="true" android:layout_marginStart="20dp"/>
+        <ImageView android:id="@+id/iv_mi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_huawei" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="5dp">
+        <TextView android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/phone_huawei" android:layout_centerVertical="true" android:layout_marginStart="20dp"/>
+        <ImageView android:id="@+id/iv_huawei" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_samsung" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="5dp">
+        <TextView android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/phone_samsung" android:layout_centerVertical="true" android:layout_marginStart="20dp"/>
+        <ImageView android:id="@+id/iv_samsung" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_oppo" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="5dp">
+        <TextView android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/phone_oppo" android:layout_centerVertical="true" android:layout_marginStart="20dp"/>
+        <ImageView android:id="@+id/iv_oppo" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_vivo" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="5dp">
+        <TextView android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/phone_vivo" android:layout_centerVertical="true" android:layout_marginStart="20dp"/>
+        <ImageView android:id="@+id/iv_vivo" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_meizu" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="5dp">
+        <TextView android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/phone_meizu" android:layout_centerVertical="true" android:layout_marginStart="20dp"/>
+        <ImageView android:id="@+id/iv_meizu" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_others" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="5dp">
+        <TextView android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/phone_other_models" android:layout_centerVertical="true" android:layout_marginStart="20dp"/>
+        <ImageView android:id="@+id/iv_others" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

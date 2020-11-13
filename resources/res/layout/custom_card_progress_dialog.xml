@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/bg_custom_card_progress_dialog" android:layout_width="230dp" android:layout_height="140dp">
+        <ImageView android:gravity="center" android:id="@+id/icon" android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/icon_progress"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp">
+            <TextView android:textColor="@color/black" android:id="@+id/message" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textColor="@color/black" android:id="@+id/schedule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5dp"/>
+        </LinearLayout>
+        <TextView android:textSize="12dp" android:textColor="@color/gray" android:id="@+id/tip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/band_clone_to_phone"/>
+    </LinearLayout>
+</FrameLayout>

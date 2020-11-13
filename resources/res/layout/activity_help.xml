@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_problem" android:layout_centerInParent="true" style="@style/activity_title_black"/>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <ProgressBar android:id="@+id/webview_progressBar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1.5dp" android:progressDrawable="@drawable/pg" android:layout_below="@+id/rl_title" style="?android:attr/progressBarStyleHorizontal"/>
+    <com.yc.pedometer.customview.WebViewScroll android:id="@+id/weekly_webview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/webview_progressBar"/>
+</RelativeLayout>

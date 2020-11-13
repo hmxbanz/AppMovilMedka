@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/map_title_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/topPanel" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:id="@+id/title_track" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/track" android:layout_centerInParent="true"/>
+            <ImageView android:id="@+id/share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/share_selector" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <com.google.android.material.tabs.TabLayout android:id="@+id/main_tab" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/title" android:overScrollMode="never" app:tabIndicatorColor="@color/white" app:tabIndicatorHeight="2dp" app:tabRippleColor="@color/transparent" app:tabSelectedTextColor="@color/white" app:tabTextAppearance="@style/TextAppearance.Holo.Small" app:tabTextColor="@color/white_line" app:theme="@style/PcmTextAppearance"/>
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/main_viewpager" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/topPanel" android:overScrollMode="never"/>
+</RelativeLayout>

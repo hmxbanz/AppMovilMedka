@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/body_fat_normal" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/body_fat_single_toolbar"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <ImageView android:id="@+id/body_testing_gender" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/body_testing_male" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <Button android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:id="@+id/Body_Start" android:background="@drawable/body_empty_start_btn_selector" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:text="@string/Body_Start" android:layout_centerInParent="true" android:textAllCaps="false" android:layout_marginStart="40dp" android:layout_marginEnd="40dp"/>
+        <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/Body_Start_Tips" android:layout_above="@+id/Body_Start" android:layout_marginStart="15dp" android:layout_marginEnd="15dp"/>
+        <ImageView android:background="@drawable/body_test_backgrand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+</LinearLayout>

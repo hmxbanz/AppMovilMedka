@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/rate_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:orientation="horizontal" android:background="@color/rate_bg_color" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+            <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <ImageView android:id="@+id/dynamic_rate_history" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/rate_dynamic_history" android:layout_centerVertical="true" android:layout_marginEnd="15dp" android:layout_alignParentEnd="true"/>
+            <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:id="@+id/test" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dynamic_rate_test" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:background="@color/rate_bg_color" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="50dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@+id/rate_value" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0"/>
+                <TextView android:textSize="@dimen/rate_dynamic_info" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/rate_dynamic_test_resultbpm"/>
+            </LinearLayout>
+            <View android:background="@color/white" android:layout_width="0.5dp" android:layout_height="match_parent" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="3">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/rate_dynamic_result" android:textColor="@color/white" android:id="@+id/hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00"/>
+                        <TextView android:textSize="@dimen/rate_dynamic_info" android:textColor="@color/white" android:id="@+id/unit_hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":"/>
+                        <TextView android:textSize="@dimen/rate_dynamic_result" android:textColor="@color/white" android:id="@+id/minute" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00"/>
+                        <TextView android:textSize="@dimen/rate_dynamic_info" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":"/>
+                        <TextView android:textSize="@dimen/rate_dynamic_result" android:textColor="@color/white" android:gravity="center" android:id="@+id/second" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00"/>
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/rate_dynamic_info" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_dynamic_test_time"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:background="@drawable/rate_dynamic_real_ladder" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="2">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <TextView android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                        <TextView android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+                        <TextView android:textSize="18dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/rate_value_lowest" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0" android:layout_weight="1"/>
+                        <TextView android:textSize="12dp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/lowest" android:layout_weight="1"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <TextView android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+                        <TextView android:textSize="18dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/rate_value_average" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0" android:layout_weight="1"/>
+                        <TextView android:textSize="12dp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/average" android:layout_weight="1"/>
+                        <TextView android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                        <TextView android:textSize="18dp" android:textColor="@color/white" android:gravity="center" android:id="@+id/rate_value_highest" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0" android:layout_weight="1"/>
+                        <TextView android:textSize="12dp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/highest" android:layout_weight="1"/>
+                        <TextView android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+                        <TextView android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:id="@+id/start_dynamic_rate" android:background="@drawable/rate_dynamic_start_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/rate_bg_color" android:gravity="center" android:id="@+id/start_test" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height" android:text="@string/start_test"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/layout_rate_ondraw" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/start_dynamic_rate">
+                <com.yc.pedometer.customview.RateDynamicOndraw android:id="@+id/rate_dynamic" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+    <ImageView android:id="@+id/ivLeft" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:scaleType="centerInside" android:layout_alignParentStart="true"/>
+    <TextView android:textSize="@dimen/font18" android:textColor="@color/titleColor" android:gravity="center" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_centerHorizontal="true"/>
+    <ImageView android:id="@+id/ivRight" android:background="?attr/selectableItemBackgroundBorderless" android:clickable="true" android:layout_width="wrap_content" android:layout_height="50dp" android:scaleType="centerInside" android:paddingStart="16dp" android:paddingEnd="16dp" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

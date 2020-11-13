@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/setting_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="vertical" android:background="@color/setting_bg_gray" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:background="@color/setting_bg_color" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+            <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:textSize="20dp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/wechat_sports"/>
+        </RelativeLayout>
+        <Button android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_wechat" android:background="@drawable/btn_remind_selector" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/wechat_access" android:layout_alignParentBottom="true" android:textAllCaps="false" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="?android:attr/borderlessButtonStyle"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/btn_wechat" android:layout_below="@+id/title" android:overScrollMode="never">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                    <ImageView android:background="@drawable/weixin_rank_example" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                    <TextView android:textSize="18dp" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/wechat_sport_pk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wechat_sport_pk"/>
+                    <TextView android:textColor="@color/text_black" android:gravity="center" android:id="@+id/wechat_sport_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/wechat_sport_tip" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/allLayout" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/dial_custom" style="@style/activity_title_black"/>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <ScrollView android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/syncWathch" android:layout_below="@+id/title">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.makeramen.roundedimageview.RoundedImageView android:layout_gravity="center" android:id="@+id/mergeBitmap" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/marginTop20"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginTop="@dimen/marginTop20" android:layout_marginStart="@dimen/settings_margin_left" android:layout_marginEnd="@dimen/settings_margin_left"/>
+            <TextView android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/marginTop20" android:text="@string/dial_bg_setting" android:layout_marginStart="@dimen/settings_margin_left" android:layout_marginEnd="@dimen/settings_margin_left"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_margin_left">
+                <TextView android:textColor="@color/text_black" android:gravity="center" android:id="@+id/dial_select_pic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_select_pic" android:drawableTop="@drawable/dial_select_pic" android:layout_marginStart="@dimen/settings_margin_left"/>
+                <TextView android:textColor="@color/text_black" android:gravity="center" android:id="@+id/dial_reset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dial_reset" android:drawableTop="@drawable/dial_reset" android:layout_marginStart="@dimen/settings_margin_left"/>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginTop="@dimen/marginTop20" android:layout_marginStart="@dimen/settings_margin_left" android:layout_marginEnd="@dimen/settings_margin_left"/>
+            <TextView android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/marginTop20" android:text="@string/dial_font_color" android:layout_marginStart="@dimen/settings_margin_left" android:layout_marginEnd="@dimen/settings_margin_left"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_margin_left">
+                <com.yc.pedometer.onlinedial.rgb.CustomDialGridView android:id="@+id/xxListView" android:layout_width="match_parent" android:layout_height="wrap_content" android:listSelector="@android:color/transparent" android:numColumns="6"/>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginTop="@dimen/marginTop20" android:layout_marginBottom="@dimen/settings_margin_left" android:layout_marginStart="@dimen/settings_margin_left" android:layout_marginEnd="@dimen/settings_margin_left"/>
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar android:id="@+id/progressBar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="@dimen/syncWatchHeight" android:progress="100" android:progressDrawable="@drawable/watch_progressbar_bg" android:layout_alignParentBottom="true" style="@style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"/>
+    <TextView android:textSize="@dimen/font18" android:textColor="@color/white" android:gravity="center" android:id="@+id/syncWathch" android:layout_width="match_parent" android:layout_height="@dimen/syncWatchHeight" android:text="@string/syncWathch" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

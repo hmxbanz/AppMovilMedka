@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/rl_all" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+    <RelativeLayout android:id="@+id/rl_top" android:background="@drawable/oxygen_gradient_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <RelativeLayout android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+            <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/bracelet_interface_blood_oxygen" android:layout_centerInParent="true"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerInParent="true" android:layout_alignParentEnd="true">
+                <ImageView android:id="@+id/share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/share_selector" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left"/>
+                <ImageView android:id="@+id/showDateDialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_calendar_selector" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <include android:id="@+id/ll_top_chart" android:visibility="visible" layout="@layout/oxygen_detail_top_chart"/>
+        <include android:id="@+id/ll_top_real" android:visibility="invisible" layout="@layout/oxygen_detail_top_real"/>
+    </RelativeLayout>
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/start_test" android:layout_below="@+id/rl_top" layout="@layout/activity_details_oxygen_bottom"/>
+    <Button android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/alarm_text_add" android:id="@+id/start_test" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="47.5dp" android:text="@string/start_test" android:layout_alignParentBottom="true" style="?android:attr/borderlessButtonStyle"/>
+</RelativeLayout>

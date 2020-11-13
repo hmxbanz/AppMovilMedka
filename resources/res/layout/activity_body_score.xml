@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/body_fat_normal" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/body_fat_single_toolbar"/>
+    <ScrollView android:background="@color/white" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/tv_body_index_details_01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/Body_Score_comment_0" android:layout_marginStart="@dimen/settings_margin_left" android:layout_marginEnd="@dimen/settings_margin_left"/>
+            <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="40dp" android:textColor="@color/body_fat_normal" android:layout_gravity="center" android:id="@+id/tv_body_score_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:text="85"/>
+                <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/body_fat_normal" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Body_Unit_Score" android:layout_alignBaseline="@+id/tv_body_score_value" android:layout_marginStart="5dp" android:layout_toEndOf="@+id/tv_body_score_value"/>
+            </RelativeLayout>
+            <com.yc.pedometer.bodyfat.view.BodyPolygonView android:id="@+id/mPolygonView" android:layout_width="match_parent" android:layout_height="250dp"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="25dp">
+                <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/body_fat_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Body_Tips_Title"/>
+                <ImageView android:background="@color/body_fat_normal" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="5dp"/>
+                <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/Body_Score_Tips"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

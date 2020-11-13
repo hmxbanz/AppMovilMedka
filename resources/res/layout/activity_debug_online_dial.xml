@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="20dp" android:textColor="@color/text_black" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="表盘调试设置"/>
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="退出该界面自动保存，下次打开应用时发送间隔恢复为默认50毫秒"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发送间隔，默认50ms"/>
+        <EditText android:id="@+id/interval" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60dp" android:inputType="number" android:layout_marginStart="@dimen/text_size_1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="最后一条间隔，默认40ms"/>
+        <EditText android:id="@+id/interval_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60dp" android:inputType="number" android:layout_marginStart="@dimen/text_size_1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="每隔多少条，延迟200ms,默认隔17条"/>
+        <EditText android:id="@+id/interval_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60dp" android:inputType="number" android:layout_marginStart="@dimen/text_size_1"/>
+    </LinearLayout>
+</LinearLayout>

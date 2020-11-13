@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center" android:orientation="vertical" android:background="@color/rate_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="11">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="45dp">
+            <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_rate_time" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="2018/01/01 20:00" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:textSize="70dp" android:textColor="@color/white" android:id="@+id/tv_rate_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="90"/>
+                <TextView android:textSize="15dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="bpm"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="9">
+        <TextView android:textSize="16dp" android:textColor="@color/rate_bg_color" android:layout_gravity="center_horizontal" android:id="@+id/rate_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="@string/rate_dynamic_status_6"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="50dp">
+            <com.yc.pedometer.customview.RateSeekBarView android:id="@+id/rateSeekBar" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="10dp">
+            <ImageView android:background="@drawable/icon_24_hour_rate" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textSize="18dp" android:textColor="@color/rate_new_color_text_1" android:layout_gravity="center_vertical" android:id="@+id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_24_hour_range" android:layout_marginStart="5dp"/>
+            <ImageView android:id="@+id/img_rate_detail" android:background="@drawable/icon_24_hour_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5dp"/>
+        </LinearLayout>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_margin="@dimen/padding10"/>
+        <TextView android:textSize="14dp" android:textColor="@color/grey3" android:gravity="start" android:id="@+id/rate_status_description" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/rate_dynamic_status_info_6" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10"/>
+    </LinearLayout>
+</LinearLayout>

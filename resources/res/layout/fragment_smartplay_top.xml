@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@drawable/smartplay_device_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="50dp">
+        <RelativeLayout android:id="@+id/rl_connect_status" android:background="@drawable/smartplay_band_circle_bg" android:layout_width="78dp" android:layout_height="78dp" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left">
+            <ImageView android:id="@+id/iv_connect_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/device_top_band_icon_disabled" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left" android:layout_toEndOf="@+id/rl_connect_status">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="20dp" android:textColor="@color/white" android:id="@+id/tv_device_value" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:textSize="@dimen/device_detail_text_size" android:textColor="@color/device_detail_text_uncon" android:id="@+id/tv_mac" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/smart_play_mac"/>
+                <TextView android:textSize="@dimen/device_detail_text_size" android:textColor="@color/white" android:id="@+id/tv_mac_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textDirection="ltr" android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:textSize="@dimen/device_detail_text_size" android:textColor="@color/device_detail_text_uncon" android:id="@+id/tv_battery" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/smart_play_electricity"/>
+                <ImageView android:id="@+id/iv_battery_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <TextView android:textSize="@dimen/device_detail_text_size" android:textColor="@color/device_detail_text_uncon" android:id="@+id/tv_connect_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unbind"/>
+                <Button android:textSize="@dimen/device_detail_text_size" android:textColor="@color/white" android:gravity="center" android:id="@+id/bt_connect" android:background="@drawable/connect_button_selector" android:layout_width="wrap_content" android:layout_height="25dp" android:text="@string/smart_play_bind_device" android:paddingStart="10dp" android:paddingEnd="10dp" android:layout_marginStart="15dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/icon_disconnection_band" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/smartplay_icon_disconnection_band" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</RelativeLayout>

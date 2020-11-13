@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:oneshot="false">
+    <item android:duration="50" android:drawable="@drawable/animation_heart30"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart31"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart32"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart33"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart34"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart35"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart36"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart37"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart38"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart39"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart40"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart41"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart42"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart43"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart44"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart45"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart46"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart47"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart48"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart49"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart50"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart51"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart52"/>
+    <item android:duration="50" android:drawable="@drawable/animation_heart53"/>
+</animation-list>

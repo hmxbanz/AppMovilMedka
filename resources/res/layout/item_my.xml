@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/llayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_channel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8dp" android:layout_centerInParent="true">
+        <ImageView android:id="@+id/ivType" android:background="@drawable/qixing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp"/>
+        <TextView android:textColor="@color/fontColor" android:gravity="center" android:id="@+id/tv" android:layout_width="match_parent" android:layout_height="36dp" android:layout_centerInParent="true"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/img_edit" android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/shanchu" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

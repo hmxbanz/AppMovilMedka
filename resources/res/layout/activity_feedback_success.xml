@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@drawable/feedback_success_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+                <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+                <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/feedback" style="@style/activity_title_black"/>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                <TextView android:textSize="@dimen/feedback_text_size_big" android:textColor="@color/gray" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fb_success"/>
+                <TextView android:textSize="@dimen/feedback_text_size_big" android:textColor="@color/gray" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/fb_thank" android:layout_marginStart="10dp" android:layout_marginEnd="10dp"/>
+                <Button android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/setting_bg_color" android:gravity="center" android:id="@+id/finish" android:background="@drawable/fillet_button_light_green_selector" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:layout_marginTop="@dimen/paddingtopmin" android:layout_marginBottom="@dimen/paddingtopmin" android:text="@string/close" android:layout_centerHorizontal="true" android:textAllCaps="false" android:layout_marginStart="40dp" android:layout_marginEnd="40dp" style="?android:attr/borderlessButtonStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

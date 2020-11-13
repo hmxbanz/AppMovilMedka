@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextureView android:id="@+id/preview_content" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+    <ImageView android:id="@+id/review_image" android:background="@android:color/black" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter"/>
+    <View android:id="@+id/flash_overlay" android:background="@android:color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0"/>
+    <ViewStub android:id="@+id/face_view_stub" android:visibility="gone" android:layout="@layout/face_view" android:inflatedId="@+id/face_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.ute.camera.ui.RenderOverlay android:id="@+id/render_overlay" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <include android:layout_gravity="center" layout="@layout/camera_controls" style="@style/CameraControls"/>
+</merge>

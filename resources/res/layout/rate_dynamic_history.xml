@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/bg_bt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textColor="@color/gray" android:id="@+id/rate_setting_real_rate_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/rate_setting_real_rate_tip" android:layout_centerHorizontal="true" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"/>
+    <ImageView android:id="@+id/rate_dynamic_history_null" android:background="@drawable/rate_dynamic_history_null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/rate_setting_real_rate_tip" android:layout_centerHorizontal="true"/>
+    <ListView android:id="@+id/listView" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:dividerHeight="15px"/>
+</RelativeLayout>

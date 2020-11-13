@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <stroke android:color="@color/weaterBg"/>
+    <solid android:color="@color/weaterBg"/>
+    <corners android:topLeftRadius="@dimen/weatherbgSize" android:topRightRadius="@dimen/weatherbgSize" android:bottomLeftRadius="@dimen/weatherbgSize" android:bottomRightRadius="@dimen/weatherbgSize"/>
+</shape>

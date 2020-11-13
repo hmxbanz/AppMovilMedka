@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="@dimen/settings_margin_left" android:layout_marginEnd="@dimen/settings_margin_left">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_twitter" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_twitter_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_twitter_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_messenger" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_facebook_messenger_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_facebook_messenger_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_facebook" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_facebook_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_facebook_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_whatsapp" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_whatsapp_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_whatsapp_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_instagram" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_instagram_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_Instagram_remind"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="@dimen/settings_margin_left" android:layout_marginEnd="@dimen/settings_margin_left">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_wechat" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_wechat_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wechat"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_wechat_moments" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_wechat_moments" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wechat_moments"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_qq" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_qq_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_qq_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_line" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_line_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_line_remind"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_vkontakte" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:background="@drawable/icon_vkontakte_remind" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="@dimen/remind_status_text_size" android:textColor="@color/light_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_VKontakte_remind"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

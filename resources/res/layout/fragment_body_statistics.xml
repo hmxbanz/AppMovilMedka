@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/body_fat_normal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.5">
+        <ImageView android:id="@+id/iv_setting_bg_gray" android:background="@color/setting_bg_gray" android:layout_width="match_parent" android:layout_height="7dp" android:layout_alignParentBottom="true"/>
+        <ImageView android:id="@+id/iv_gray_line" android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentBottom="true"/>
+        <com.yc.pedometer.bodyfat.view.BodySlideCurveView android:id="@+id/slide_curve" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/iv_setting_bg_gray" android:layout_below="@+id/rl_title" android:layerType="software"/>
+    </RelativeLayout>
+    <ScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/tv_body_statistics_details_01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:layout_marginBottom="5dp" android:text="@string/Body_Fat_comment_1" android:layout_marginStart="@dimen/settings_margin_left" android:layout_marginEnd="@dimen/settings_margin_left"/>
+            <com.yc.pedometer.bodyfat.view.BodyStatisticsHorizontalBar android:id="@+id/mBodyHorizontalBar" android:layout_width="match_parent" android:layout_height="80dp"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/tv_body_statistics_details_02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:layout_marginBottom="5dp" android:text="@string/Body_Fat_comment_2" android:layout_marginStart="@dimen/settings_margin_left" android:layout_marginEnd="@dimen/settings_margin_left"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

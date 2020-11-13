@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?android:attr/listPreferredItemHeight">
+    <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <View android:id="@+id/divider_line" android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginBottom="@dimen/line_height" android:layout_alignParentBottom="true"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_above="@+id/divider_line">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.9">
+                <TextView android:textColor="@color/gray" android:gravity="center" android:id="@+id/tv_year_month" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="10" android:layout_marginStart="20dp"/>
+                <TextView android:textColor="@color/gray" android:gravity="center" android:id="@+id/tv_the_time" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="08:12" android:layout_marginStart="10dp"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textSize="18dp" android:textColor="@color/black" android:layout_gravity="center" android:id="@+id/tv_body_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.0" android:layout_weight="1"/>
+                    <TextView android:textColor="@color/gray" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Body_Unit_Score" android:layout_weight="1" android:layout_alignBaseline="@+id/tv_body_index" android:layout_marginStart="2dp" android:layout_toEndOf="@+id/tv_body_index"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.7">
+                <TextView android:textColor="@color/gray" android:gravity="center" android:id="@+id/tv_body_fat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Body_Fat" android:layout_centerVertical="true"/>
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_body_fat_rate" android:background="@drawable/body_fat_value_bg_standard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12.7%" android:paddingStart="5dp" android:paddingEnd="5dp" android:layout_marginStart="5dp" android:layout_toEndOf="@+id/tv_body_fat"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="5dp" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

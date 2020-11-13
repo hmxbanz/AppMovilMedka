@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/guide_head_layout" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.yc.pedometer.customview.GuideViewPage android:layout_gravity="center" android:id="@+id/guidePages" android:background="@color/setting_bg_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never"/>
+    <RelativeLayout android:layout_gravity="bottom" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="15dp">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/viewGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</FrameLayout>

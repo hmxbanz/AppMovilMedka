@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/black" android:layout_gravity="center_horizontal" android:id="@+id/calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/today"/>
+        <TextView android:textSize="14dp" android:textColor="@color/gray" android:layout_gravity="center_horizontal" android:id="@+id/today" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/today"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/title">
+        <com.yc.pedometer.customview.DayRateChartView2 android:id="@+id/chartView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+        <View android:background="@color/rate_data_circle_color" android:layout_width="match_parent" android:layout_height="2dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+            <ListView android:id="@+id/rate_day_listview" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@color/gray_line" android:dividerHeight="0.2dp" android:headerDividersEnabled="false"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

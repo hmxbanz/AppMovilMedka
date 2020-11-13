@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/menstruation_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:gravity="center" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/PhysiologicalCycleTitle" android:layout_centerInParent="true" android:layout_toStartOf="@+id/setting" android:layout_toEndOf="@+id/back"/>
+        <TextView android:textColor="@color/white" android:id="@+id/setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings" android:layout_centerVertical="true" android:layout_marginStart="@dimen/padding" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <ScrollView android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:gravity="center_vertical" android:background="@color/white" android:paddingTop="3dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/iv_left" android:background="@drawable/menstruation_left_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" android:layout_alignParentStart="true"/>
+                <ImageView android:id="@+id/iv_right" android:background="@drawable/menstruation_right_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" android:layout_alignParentEnd="true"/>
+                <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/date_operator_ll" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <TextView android:textSize="20sp" android:textColor="@color/text_gray" android:gravity="center_horizontal" android:id="@+id/date_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" style="@style/myschedule_current_month_tv"/>
+                    <TextView android:textSize="20sp" android:textColor="@color/text_gray" android:gravity="center_horizontal" android:id="@+id/week_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_marginStart="10dp" style="@style/myschedule_current_month_tv"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.yc.pedometer.calendar.MenstruationWeekDayView android:background="@color/white" android:layout_width="match_parent" android:layout_height="30dp"/>
+                <com.yc.pedometer.calendar.MenstruationMonthDateView android:id="@+id/monthDateView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="280dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:background="@drawable/menstruation_type_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:background="@drawable/icon_indicator_menstruation" android:layout_width="20dp" android:layout_height="20dp"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/PhysiologicalMenstruation" android:layout_marginStart="5dp"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:background="@drawable/icon_indicator_nex_menstruation" android:layout_width="20dp" android:layout_height="20dp"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/PhysiologicalPrediction" android:layout_marginStart="5dp"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1">
+                    <ImageView android:background="@drawable/icon_indicator_ovulate" android:layout_width="20dp" android:layout_height="20dp"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/PhysiologicalOvulation" android:layout_marginStart="5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/line" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="10dp"/>
+            <RelativeLayout android:orientation="horizontal" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="@dimen/padding10" android:layout_marginBottom="@dimen/padding10">
+                <CheckBox android:id="@+id/physiological_switch" android:background="@drawable/switch_on_menstruation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/physiological_switch">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/PhysiologicalRemind"/>
+                    <TextView android:textSize="@dimen/small" android:textColor="@color/text_gray" android:gravity="center_vertical" android:id="@+id/timed_test_rate_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/PhysiologicalRemindSub"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:background="@color/line" android:layout_width="match_parent" android:layout_height="1dp"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_gravity="center" android:id="@+id/tv_selete_menstrual" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/PhysiologicalPredictionOn"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_gravity="center" android:id="@+id/tv_selete_calendar" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="2018/10/10 "/>
+            <Button android:textSize="@dimen/text_size_1" android:textColor="@color/menstruation_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/btn_back_today" android:background="@drawable/menstruation_back_today_selector" android:visibility="gone" android:layout_width="200dp" android:layout_height="40dp" android:layout_marginTop="10dp" android:text="@string/PhysiologicalBackToday" android:textAllCaps="false" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" style="?android:attr/borderlessButtonStyle"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

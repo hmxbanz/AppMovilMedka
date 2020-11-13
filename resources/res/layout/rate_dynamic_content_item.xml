@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?android:attr/listPreferredItemHeight">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?android:attr/listPreferredItemHeight" android:layout_weight="5">
+        <ImageView android:id="@+id/icon_sports_data_from" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_rate_dynamic"/>
+    </LinearLayout>
+    <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <View android:id="@+id/divider_line" android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginBottom="@dimen/line_height" android:layout_alignParentBottom="true" android:layout_marginEnd="@dimen/padding10"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_above="@+id/divider_line">
+            <TextView android:textSize="@dimen/small_value" android:textColor="@color/gray" android:id="@+id/rate_dynamic_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20:50" android:layout_centerVertical="true"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/layout_max_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="20dp" android:layout_toEndOf="@+id/rate_dynamic_time">
+                <TextView android:textSize="12dp" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/highest"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/value20" android:textColor="@color/black" android:id="@+id/tv_max_rate_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="120"/>
+                    <TextView android:textSize="12dp" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="bpm" android:layout_centerVertical="true" android:layout_marginStart="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="20dp" android:layout_toEndOf="@+id/layout_max_rate">
+                <TextView android:textSize="12dp" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lowest"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/value20" android:textColor="@color/black" android:id="@+id/tv_min_rate_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="80"/>
+                    <TextView android:textSize="12dp" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="bpm" android:layout_centerVertical="true" android:layout_marginStart="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:id="@+id/iv_right" android:background="@drawable/settings_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="15dp" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

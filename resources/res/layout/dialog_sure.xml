@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/oval_watchbg" android:padding="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="68dp" android:layout_marginEnd="68dp">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/font16" android:textColor="#5b5959" android:id="@+id/txtLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="21dp" android:text="@string/suredeleteWatch" android:layout_centerHorizontal="true"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_below="@+id/txtLabel">
+            <TextView android:textSize="@dimen/font16" android:textColor="@color/main" android:gravity="center" android:id="@+id/txtCancle" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1"/>
+            <TextView android:background="#d9dfe2" android:layout_width="@dimen/lineHeight" android:layout_height="20dp" android:text="|" android:layout_centerInParent="true"/>
+            <TextView android:textSize="@dimen/font16" android:textColor="@color/homeRunColor" android:gravity="center" android:id="@+id/txtSure" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sure" android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

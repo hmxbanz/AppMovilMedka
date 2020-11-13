@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:background="@color/setting_bg_color" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/cardiovascular_health_index" android:layout_centerInParent="true"/>
+        <ImageView android:id="@+id/showDateDialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_calendar_selector" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <Button android:textColor="@color/white" android:gravity="center" android:id="@+id/start_test" android:background="@drawable/rate_dynamic_start_selector" android:layout_width="match_parent" android:layout_height="35dp" android:text="@string/start_test" android:layout_alignParentBottom="true" android:textAllCaps="false"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/start_test" android:layout_below="@+id/title" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/rl_head_portrait" android:background="@color/setting_bg_color" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.yc.pedometer.customview.RingView android:id="@+id/ringView" android:layout_width="150dp" android:layout_height="150dp"/>
+                </RelativeLayout>
+                <com.yc.pedometer.customview.MyHorizontalScrollView android:id="@+id/id_horizontalScrollView" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:layout_marginStart="15dp" android:layout_marginEnd="15dp">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/id_gallery" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </com.yc.pedometer.customview.MyHorizontalScrollView>
+            </LinearLayout>
+            <TextView android:textColor="@color/gray" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="2017年6月20日  16:50"/>
+            <com.yc.pedometer.customview.HorizontalBar android:id="@+id/mHorizontalBar" android:layout_width="wrap_content" android:layout_height="80dp"/>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/ecg_btn_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20dp">
+                <TextView android:textSize="16dp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="@string/cardiovascular_health_index" android:layout_alignParentStart="true"/>
+                <TextView android:textSize="12dp" android:textColor="@color/gray" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cardiovascular_health_index2" android:paddingStart="10dp" android:paddingEnd="10dp" android:layout_alignParentStart="true"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

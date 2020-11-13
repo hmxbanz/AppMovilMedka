@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/setting_bg_gray" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+            <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_black_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/body_temperature_setting" style="@style/activity_title_black"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height">
+            <ImageView android:id="@+id/temperature_auto_test_switch" android:background="@drawable/switch_on" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/temperature_auto_test_switch">
+                <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto_test"/>
+                <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/auto_test_des24"/>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_time_period" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/settings_right_time_period">
+                <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/time_period" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/time_period"/>
+                <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/text_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/time_period_range"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/settings_right_time_period" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+            <TextView android:textColor="@color/text_black" android:gravity="center" android:id="@+id/time_period_value" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="08:00~21:00" android:layout_marginEnd="@dimen/padding" android:layout_toStartOf="@+id/settings_right_time_period"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_test_circle" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/settings_right_cycle">
+                <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/test_cycle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/train_cycle"/>
+                <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/text_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/temperature_cycle_des"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/settings_right_cycle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+            <TextView android:textColor="@color/text_black" android:gravity="center" android:id="@+id/cycle_value" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginEnd="@dimen/padding" android:layout_toStartOf="@+id/settings_right_cycle"/>
+        </RelativeLayout>
+        <View android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/thick_dividing_line_height"/>
+        <RelativeLayout android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height">
+            <ImageView android:id="@+id/body_temperature_high_alarm_switch" android:background="@drawable/switch_on" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/body_temperature_high_alarm_switch">
+                <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/body_temperature_high_alarm"/>
+            </LinearLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_body_temperature_high_value" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/settings_right_high">
+                <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/body_temperature_high_alarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="37.3℃"/>
+                <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/text_gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/body_temperature_high_alarm_des"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/settings_right_high" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <View android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/thick_dividing_line_height"/>
+        <RelativeLayout android:id="@+id/rl_unit" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height">
+            <ImageView android:id="@+id/settings_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+            <TextView android:textColor="@color/text_black" android:gravity="center" android:id="@+id/unit_value" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/celsius_unit" android:layout_marginEnd="@dimen/padding" android:layout_toStartOf="@+id/settings_right"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height" android:text="@string/unit" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/unit_value"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

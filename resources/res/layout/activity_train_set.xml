@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/setting_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.5">
+        <include android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/training_goal_toolbar"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_indicator_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_below="@+id/rl_title">
+            <View android:layout_gravity="center" android:id="@+id/indicator_start_time" android:background="@color/indicator_start_time" android:layout_width="6dp" android:layout_height="10dp" android:layout_marginStart="@dimen/back_margin_left"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/train_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/start_time" android:layout_marginStart="5dp"/>
+        </LinearLayout>
+        <com.yc.pedometer.customview.TrainCircleClockProgressView android:id="@+id/circleProgressbar" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginTop="10dp" android:layout_below="@+id/ll_indicator_start_time" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <View android:id="@+id/gray_line2" android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginTop="10dp"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_indicator_schedule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_below="@+id/gray_line2">
+            <View android:layout_gravity="center" android:id="@+id/indicator_schedule" android:background="@color/indicator_start_time" android:layout_width="6dp" android:layout_height="10dp" android:layout_marginStart="@dimen/back_margin_left"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:id="@+id/schedule_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/schedule" android:layout_marginStart="5dp"/>
+        </LinearLayout>
+        <com.yc.pedometer.calendar.WeekDayView android:id="@+id/mWeekDayView" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp" android:layout_below="@+id/ll_indicator_schedule"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_checkbox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/mWeekDayView">
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@+id/checkSun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_schedule_normal"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@+id/checkMon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_schedule_normal"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@+id/checkTue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_schedule_normal"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@+id/checkWed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_schedule_normal"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@+id/checkThu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_schedule_normal"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@+id/checkFri" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_schedule_normal"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@+id/checkSat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_schedule_normal"/>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_train_reminder" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/train_item_height" android:layout_marginTop="30dp" android:layout_below="@+id/ll_checkbox">
+            <CheckBox android:id="@+id/train_reminder_switch" android:layout_width="wrap_content" android:layout_height="match_parent" android:button="@drawable/checkbox_selector" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center_vertical" android:id="@+id/train_reminder" android:layout_width="wrap_content" android:layout_height="@dimen/train_item_height" android:text="@string/train_reminder" android:layout_marginStart="@dimen/back_margin_left"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_reminder_time" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/train_item_height" android:layout_below="@+id/rl_train_reminder" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="@dimen/train_item_height" android:text="@string/reminder_time" android:layout_marginStart="@dimen/back_margin_left"/>
+            <ImageView android:id="@+id/settings_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+            <TextView android:textColor="@color/gray" android:id="@+id/reminder_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="8:00" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/padding" android:layout_toStartOf="@+id/settings_right"/>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <Button android:textSize="@dimen/text_size_1" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_delete" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginBottom="20dp" android:text="@string/train_delete" android:layout_alignParentBottom="true" android:textAllCaps="false" android:layout_marginStart="40dp" android:layout_marginEnd="40dp" style="?android:attr/borderlessButtonStyle"/>
+    </RelativeLayout>
+</LinearLayout>

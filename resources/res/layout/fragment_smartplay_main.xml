@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/fragment_smartplay"/>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/layout_unbind" android:visibility="visible" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/hjc_navigation_bar_height">
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/text_black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="@dimen/title_item_height" android:text="@string/select_device"/>
+        <RelativeLayout android:id="@+id/rl_band" android:background="@drawable/unbind_band_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@+id/rl_band1" android:background="@drawable/smartplay_band_circle_bg" android:layout_width="74dp" android:layout_height="74dp" android:layout_centerVertical="true" android:layout_marginStart="26dp">
+                <RelativeLayout android:background="@drawable/smartplay_band_circle_white_bg" android:layout_width="56dp" android:layout_height="56dp" android:layout_centerVertical="true" android:layout_marginStart="9dp">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/unbind_band_icon" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_device" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_toEndOf="@+id/rl_band1"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_headset" android:background="@drawable/unbind_headset_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@+id/rl_headset1" android:background="@drawable/smartplay_headset_circle_bg" android:layout_width="74dp" android:layout_height="74dp" android:layout_centerVertical="true" android:layout_marginStart="26dp">
+                <RelativeLayout android:background="@drawable/smartplay_band_circle_white_bg" android:layout_width="56dp" android:layout_height="56dp" android:layout_centerVertical="true" android:layout_marginStart="9dp">
+                    <ImageView android:id="@+id/iv_connect_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/unbind_headset_icon" android:layout_centerVertical="true" android:layout_marginStart="13dp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_headset" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_toEndOf="@+id/rl_headset1"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

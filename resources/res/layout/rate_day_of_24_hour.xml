@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/title">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <View android:background="@color/red" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            <com.yc.pedometer.customview.Rate24HourLineChartView android:id="@+id/line_Chart" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="99"/>
+            <View android:background="@color/red" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:layout_marginStart="40dp" android:layout_marginEnd="40dp">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                    <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lowest"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/rate_new_text_size_1" android:textColor="@color/rate_new_color_text_1" android:id="@+id/min_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="bpm"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+                    <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/highest"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/rate_new_text_size_1" android:textColor="@color/rate_new_color_text_1" android:id="@+id/max_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="140"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="bpm"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:background="@color/red" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignParentBottom="true"/>
+        </LinearLayout>
+        <View android:background="@color/rate_new_color_jingxi" android:layout_width="match_parent" android:layout_height="8dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="10dp">
+                <ImageView android:background="@drawable/icon_24_hour_rate" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textSize="18dp" android:textColor="@color/rate_new_color_text_1" android:layout_gravity="center_vertical" android:id="@+id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_24_hour_range" android:layout_marginStart="5dp"/>
+                <ImageView android:id="@+id/img_rate_detail" android:background="@drawable/icon_24_hour_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="15dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <com.yc.pedometer.customview.Rate24HourPieChartView android:id="@+id/pie_chart" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <ImageView android:id="@+id/rate_data_null" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/rate_dynamic_history_null"/>
+                </RelativeLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="20dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/iv_jixian" android:background="@drawable/icon_24_hour_rate_jixian" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_1" android:id="@+id/rate_percent_value_jixian" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10%" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_2" android:id="@+id/tv1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ji_xian" android:layout_centerVertical="true" android:layout_marginStart="5dp" android:layout_toStartOf="@+id/rate_percent_value_jixian" android:layout_toEndOf="@+id/iv_jixian"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/iv_wuyang" android:background="@drawable/icon_24_hour_rate_wuyang" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_1" android:id="@+id/rate_percent_value_wuyang" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10%" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wu_yang" android:layout_centerVertical="true" android:layout_marginStart="5dp" android:layout_toStartOf="@+id/rate_percent_value_wuyang" android:layout_toEndOf="@+id/iv_wuyang"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/iv_xinfei" android:background="@drawable/icon_24_hour_rate_xinfei" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_1" android:id="@+id/rate_percent_value_xinfei" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10%" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xin_fei" android:layout_centerVertical="true" android:layout_marginStart="5dp" android:layout_toStartOf="@+id/rate_percent_value_xinfei" android:layout_toEndOf="@+id/iv_xinfei"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/iv_ranzhi" android:background="@drawable/icon_24_hour_rate_ranzhi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_1" android:id="@+id/rate_percent_value_ranzhi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10%" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ran_zhi" android:layout_centerVertical="true" android:layout_marginStart="5dp" android:layout_toStartOf="@+id/rate_percent_value_ranzhi" android:layout_toEndOf="@+id/iv_ranzhi"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/iv_jianya" android:background="@drawable/icon_24_hour_rate_jianya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_1" android:id="@+id/rate_percent_value_jianya" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10%" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jian_ya" android:layout_centerVertical="true" android:layout_marginStart="5dp" android:layout_toStartOf="@+id/rate_percent_value_jianya" android:layout_toEndOf="@+id/iv_jianya"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                        <ImageView android:id="@+id/iv_jingxi" android:background="@drawable/icon_24_hour_rate_jingxi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_1" android:id="@+id/rate_percent_value_jingxi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10%" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                        <TextView android:textSize="@dimen/rate_new_text_size_2" android:textColor="@color/rate_new_color_text_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jing_xi" android:layout_centerVertical="true" android:layout_marginStart="5dp" android:layout_toStartOf="@+id/rate_percent_value_jingxi" android:layout_toEndOf="@+id/iv_jingxi"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

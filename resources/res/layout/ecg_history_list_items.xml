@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?android:attr/listPreferredItemHeight">
+    <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <View android:id="@+id/divider_line" android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginBottom="@dimen/line_height" android:layout_alignParentBottom="true"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1" android:layout_above="@+id/divider_line">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.1">
+                <TextView android:textColor="@color/gray" android:gravity="center" android:id="@+id/tv_year_month" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="10" android:layout_marginStart="20dp"/>
+                <TextView android:textColor="@color/gray" android:gravity="center" android:id="@+id/tv_the_time" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="08:12" android:layout_marginStart="10dp"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textSize="18dp" android:textColor="@color/gray" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/HRV_Title" android:layout_weight="1"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.7">
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_ecg_status" android:background="@drawable/body_fat_value_bg_standard" android:paddingTop="2dp" android:paddingBottom="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Body_Fat" android:layout_centerVertical="true" android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginEnd="25dp" android:layout_alignParentEnd="true"/>
+                <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/text_black" android:gravity="center" android:id="@+id/tv_HRV_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="87" android:paddingEnd="10dp" android:layout_toStartOf="@+id/tv_ecg_status"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="5dp" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

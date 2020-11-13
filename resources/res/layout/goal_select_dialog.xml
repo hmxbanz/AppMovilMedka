@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <View android:id="@+id/personage_cancel2" android:layout_width="wrap_content" android:layout_height="10dp" android:layout_alignParentBottom="true"/>
+    <Button android:textSize="16dp" android:textColor="@color/blue" android:id="@+id/cancel" android:background="@drawable/body_dialog_bg" android:layout_width="300dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="@string/cancel" android:layout_above="@+id/personage_cancel2" android:layout_centerHorizontal="true" android:textAllCaps="false" android:layout_alignStart="@+id/rl" style="?android:attr/borderlessButtonStyle"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/rl" android:background="@drawable/body_dialog_bg" android:layout_width="300dp" android:layout_height="wrap_content" android:layout_above="@+id/cancel" android:layout_centerHorizontal="true">
+        <TextView android:textSize="14dp" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="7dp" android:text="@string/personalInfo" android:layout_centerHorizontal="true"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_WheelView_layout" android:paddingTop="15dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.yc.pedometer.wheel.WheelView android:id="@+id/passw_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+        <Button android:textSize="16dp" android:textColor="@color/blue" android:id="@+id/comfire" android:background="@drawable/body_dialog_confirm_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/confirm" android:textAllCaps="false" style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+</RelativeLayout>

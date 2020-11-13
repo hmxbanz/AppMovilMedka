@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="bottom" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+        <ImageView android:id="@+id/txtAdd" android:background="?attr/selectableItemBackgroundBorderless" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/homeadd" android:scaleType="centerInside" android:layout_alignParentEnd="true"/>
+        <com.yc.pedometer.sports.widget.HomeEnTabLayout android:id="@+id/tab_code" android:layout_width="wrap_content" android:layout_height="@dimen/tabHeight" android:layout_marginEnd="50dp" app:tabIndicatorColor="@color/main" app:tabIndicatorHeight="@dimen/tabPaddingHeight" app:tabSelectTextColor="@color/main" app:tabTextColor="@color/text_color" app:tab_Mode="2"/>
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/viewpager_code" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+</LinearLayout>

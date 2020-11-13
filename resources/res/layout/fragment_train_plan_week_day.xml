@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_train_rest_day" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_train_rest"/>
+        <TextView android:textColor="@color/gray" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/train_rest_day" android:layout_marginStart="30dp" android:layout_marginEnd="30dp"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_train_day" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="3">
+            <RelativeLayout android:id="@+id/rl_train_step" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/icon_train_step" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_train_step" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toEndOf="@+id/icon_train_step">
+                    <TextView android:id="@+id/step_count_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/step_count"/>
+                    <TextView android:textSize="@dimen/bigger" android:id="@+id/step_count_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="0"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/rl_train_distance" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+                <ImageView android:id="@+id/icon_train_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_train_distance" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toEndOf="@+id/icon_train_distance">
+                    <TextView android:id="@+id/distance_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/distance"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                        <TextView android:textSize="@dimen/bigger" android:id="@+id/distance_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+                        <TextView android:textSize="@dimen/small" android:textColor="@color/gray" android:id="@+id/distance_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kilometers" android:layout_marginStart="3dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2">
+            <com.yc.pedometer.customview.TrainCircleProgressView android:id="@+id/circleProgressbar" android:layout_width="100dp" android:layout_height="100dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

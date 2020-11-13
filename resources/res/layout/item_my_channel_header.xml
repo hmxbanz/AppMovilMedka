@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="48dp">
+    <TextView android:textSize="@dimen/font16" android:id="@+id/tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_cahnnel" android:layout_centerVertical="true" android:layout_marginStart="16dp"/>
+    <TextView android:textSize="12sp" android:textColor="@color/tip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tip_drag" android:layout_alignBottom="@+id/tv" android:layout_marginStart="16dp" android:layout_toEndOf="@+id/tv"/>
+    <TextView android:textSize="@dimen/font13" android:textColor="@color/red_500" android:gravity="center" android:id="@+id/tv_btn_edit" android:background="@drawable/bg_btn" android:visibility="gone" android:layout_width="56dp" android:layout_height="30dp" android:text="@string/edit" android:layout_centerVertical="true" android:layout_marginEnd="8dp" android:layout_alignParentEnd="true"/>
+    <View android:background="@color/tip2" android:visibility="gone" android:layout_width="match_parent" android:layout_height="10dp" android:layout_marginTop="18dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

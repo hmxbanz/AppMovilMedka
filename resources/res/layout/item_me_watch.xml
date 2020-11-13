@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center" android:id="@+id/rlbg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/ivBiaoPan" android:layout_width="wrap_content" android:layout_height="106dp"/>
+        <ImageView android:id="@+id/ivDel" android:background="@drawable/bg_notselect" android:visibility="visible" android:layout_width="16dp" android:layout_height="16dp" android:layout_margin="8dp" android:layout_alignEnd="@+id/ivBiaoPan"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/text_size_1" android:id="@+id/child_left_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10"/>
+    <com.yc.pedometer.ecg.EcgReportHorizontalBar android:id="@+id/mEcgReportHorizontalBar" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <View android:id="@+id/parent_dashed_view" android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.2dp" android:layout_marginTop="@dimen/padding10" android:layerType="software"/>
+</LinearLayout>

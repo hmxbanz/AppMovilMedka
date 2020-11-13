@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="70dp">
+    <TextView android:textSize="@dimen/text_size_3" android:textColor="@color/white" android:gravity="center" android:id="@+id/bp_status" android:background="@drawable/bp_values_level_high0_bg" android:layout_width="wrap_content" android:layout_height="25dp" android:text="@string/bp_status_normal" android:paddingStart="@dimen/back_margin_left" android:paddingEnd="@dimen/back_margin_left" android:layout_marginStart="@dimen/back_margin_left"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/rl_del" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/bp_status">
+        <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="@dimen/step_text_size_big2" android:textColor="@color/text_black" android:id="@+id/bp_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10:00" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left"/>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:id="@+id/bp_high_pressure" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100" style="@style/secondary_interface_value_2"/>
+            <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bp_value_units" android:layout_alignBaseline="@+id/bp_high_pressure" android:layout_marginStart="@dimen/value_padding_unit" android:layout_toEndOf="@+id/bp_high_pressure"/>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:id="@+id/bp_low_pressure" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="80" style="@style/secondary_interface_value_2"/>
+            <TextView android:textSize="@dimen/text_size_2" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bp_value_units" android:layout_alignBaseline="@+id/bp_low_pressure" android:layout_marginStart="@dimen/value_padding_unit" android:layout_toEndOf="@+id/bp_low_pressure"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

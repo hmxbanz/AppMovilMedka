@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yc.pedometer.customview.VpSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/swipe_container" android:background="@color/white" android:addStatesFromChildren="true" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/toolbar_layout" android:background="@drawable/sport_bg" android:layout_width="match_parent" android:layout_height="wrap_content" app:contentScrim="@color/setting_bg_color" app:layout_scrollFlags="13">
+                <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/hjc_navigation_bar_height" app:layout_collapseMode="2" app:layout_collapseParallaxMultiplier="0.5" layout="@layout/today_fold_head"/>
+                <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="@dimen/hjc_navigation_bar_height" app:contentInsetLeft="0dp" app:contentInsetStart="0dp" app:layout_collapseMode="1">
+                    <include android:id="@+id/toolbar1" android:layout_width="match_parent" android:layout_height="45dp" layout="@layout/today_toolbar_head"/>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.core.widget.NestedScrollView android:id="@+id/mNestedScrollView" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <include android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/padding10" layout="@layout/fragment_homepage_bottom"/>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</com.yc.pedometer.customview.VpSwipeRefreshLayout>

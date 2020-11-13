@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="50dp">
+        <TextView android:textColor="@color/bp_list_text_color" android:layout_gravity="center_vertical" android:id="@+id/bp_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="17:00" android:layout_marginStart="10dp"/>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="10dp">
+            <ImageView android:id="@+id/bp_status_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+            <View android:background="@color/bp_line" android:layout_width="1dp" android:layout_height="wrap_content" android:layout_above="@+id/bp_status_img" android:layout_centerInParent="true"/>
+            <View android:background="@color/bp_line" android:layout_width="1dp" android:layout_height="match_parent" android:layout_below="@+id/bp_status_img" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <TextView android:textColor="@color/bp_list_text_color" android:layout_gravity="center_vertical" android:id="@+id/bp_status_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bp_status_normal" android:layout_marginStart="10dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_alignParentEnd="true">
+        <TextView android:textColor="@color/bp_list_text_color" android:layout_gravity="center_vertical" android:id="@+id/bp_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="100/60" android:layout_marginStart="5dp"/>
+        <TextView android:textColor="@color/bp_list_text_color" android:layout_gravity="center_vertical" android:id="@+id/bp_value_units" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bp_value_units" android:layout_marginStart="10dp" android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+</RelativeLayout>

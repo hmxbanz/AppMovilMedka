@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@drawable/training_plan_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.88">
+        <include android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/training_title_both_sides"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_marked" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <TextView android:textColor="@color/white_line" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/grand_total" android:layout_weight="1"/>
+            <TextView android:textColor="@color/white_line" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/week_total_steps" android:layout_weight="1"/>
+            <TextView android:textColor="@color/white_line" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/goal_complete" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_below="@+id/ll_marked" android:layout_centerInParent="true">
+            <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="30sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/total_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+                <TextView android:textColor="@color/white_line" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/day" android:layout_alignBaseline="@+id/total_day" android:layout_marginStart="3dp" android:layout_toEndOf="@+id/total_day"/>
+            </RelativeLayout>
+            <TextView android:textSize="30sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/total_step" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0" android:layout_weight="1"/>
+            <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="30sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/done_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+                <TextView android:textColor="@color/white_line" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/day" android:layout_alignBaseline="@+id/done_day" android:layout_marginStart="3dp" android:layout_toEndOf="@+id/done_day"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <TextView android:textSize="14sp" android:textColor="@color/setting_bg_color" android:id="@+id/month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_centerHorizontal="true"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_week" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_below="@+id/month">
+            <RelativeLayout android:visibility="invisible" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clock_sun" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clock_mon" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clock_tue" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clock_wed" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clock_thu" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clock_fri" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clock_sat" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@+id/ll_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_below="@+id/ll_week">
+            <RelativeLayout android:visibility="invisible" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_plan_circle_normal" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:id="@+id/iv_sunday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_plan_circle_normal" android:layout_centerInParent="true"/>
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:id="@+id/sunday_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="21" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+                <ImageView android:id="@+id/sunday_done_point" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="10dp" android:layout_below="@+id/iv_sunday" android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:id="@+id/iv_monday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_plan_circle_normal" android:layout_centerInParent="true"/>
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:id="@+id/monday_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="22" android:layout_centerInParent="true"/>
+                <ImageView android:id="@+id/monday_done_point" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="10dp" android:layout_below="@+id/iv_monday" android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:id="@+id/iv_tuesday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_plan_circle_normal" android:layout_centerInParent="true"/>
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:id="@+id/tuesday_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="23" android:layout_centerInParent="true"/>
+                <ImageView android:id="@+id/tuesday_done_point" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="10dp" android:layout_below="@+id/iv_tuesday" android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:id="@+id/iv_wednesday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_plan_circle_normal" android:layout_centerInParent="true"/>
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:id="@+id/wednesday_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="24" android:layout_centerInParent="true"/>
+                <ImageView android:id="@+id/wednesday_done_point" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="10dp" android:layout_below="@+id/iv_wednesday" android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:id="@+id/iv_thursday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_plan_circle_normal" android:layout_centerInParent="true"/>
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:id="@+id/thursday_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="25" android:layout_centerInParent="true"/>
+                <ImageView android:id="@+id/thursday_done_point" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="10dp" android:layout_below="@+id/iv_thursday" android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:id="@+id/iv_friday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_plan_circle_normal" android:layout_centerInParent="true"/>
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:id="@+id/friday_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="26" android:layout_centerInParent="true"/>
+                <ImageView android:id="@+id/friday_done_point" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="10dp" android:layout_below="@+id/iv_friday" android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:id="@+id/iv_saturday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_plan_circle_normal" android:layout_centerInParent="true"/>
+                <TextView android:textSize="12sp" android:textColor="@color/setting_bg_color" android:id="@+id/saturday_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="27" android:layout_centerInParent="true"/>
+                <ImageView android:id="@+id/saturday_done_point" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="5dp" android:layout_height="5dp" android:layout_marginTop="10dp" android:layout_below="@+id/iv_saturday" android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:visibility="invisible" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/train_plan_circle_normal" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="22dp" android:layout_below="@+id/ll_date"/>
+        <com.google.android.material.tabs.TabLayout android:id="@+id/main_tab" android:layout_width="match_parent" android:layout_height="3dp" android:layout_marginTop="20dp" android:layout_below="@+id/ll_date" android:overScrollMode="never" app:tabIndicatorColor="@color/setting_bg_color" app:tabIndicatorHeight="3dp" app:tabMode="0" app:tabRippleColor="@color/transparent"/>
+        <View android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="4dp" android:layout_marginTop="20dp" android:layout_below="@+id/ll_date" android:onClick="InterceptonClick"/>
+        <com.yc.pedometer.customview.NoScrollViewPager android:id="@+id/main_viewpager" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/main_tab" android:overScrollMode="never"/>
+    </RelativeLayout>
+</LinearLayout>

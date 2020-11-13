@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/white" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.yc.pedometer.sports.widget.AppToolBar android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" app:barTitle="@string/heartAlarm" app:leftRes="@drawable/icon_back_black_selector"/>
+        <RelativeLayout android:id="@+id/rlHeartYujing" android:background="@drawable/friend_recycler_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/itemHight" android:layout_below="@+id/toolbar">
+            <View android:background="@color/lineColor" android:layout_width="match_parent" android:layout_height="@dimen/lineHeight"/>
+            <View android:background="@color/lineColor" android:layout_width="match_parent" android:layout_height="@dimen/lineHeight" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/marginLeft" android:layout_marginEnd="@dimen/marginRight"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/marginLeft" android:layout_toStartOf="@+id/heartYuSwitch">
+                <TextView android:textSize="@dimen/font16" android:textColor="@color/fontColor" android:gravity="center_vertical" android:id="@+id/tvHeartYujing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/heartAlarm"/>
+                <TextView android:textSize="@dimen/font13" android:textColor="@color/litterGray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/heartAlarmTips" android:layout_below="@+id/tvHeartYujing"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/heartYuSwitch" android:background="@drawable/ivclose" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/marginRight" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

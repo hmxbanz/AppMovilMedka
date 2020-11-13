@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/setting_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.2">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+            <ImageView android:id="@+id/clock_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:textSize="20dp" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/smart_alarm_clock"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/title">
+            <ImageView android:id="@+id/iv_sun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/clock_sun" android:alpha="0.8" android:layout_marginStart="15dp"/>
+            <ImageView android:id="@+id/iv_moon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/clock_moon" android:alpha="0.8" android:layout_marginEnd="15dp" android:layout_alignParentEnd="true"/>
+            <com.yc.pedometer.customview.CustomClockView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <RelativeLayout android:id="@+id/clock_one" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/rl_clock_one" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textSize="30dp" android:textColor="@color/gray" android:id="@+id/clock_one_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12:00" android:layout_marginStart="5dp"/>
+                <TextView android:textSize="@dimen/clock_period_text" android:textColor="@color/gray" android:id="@+id/clock_one_am_pm" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/am" android:layout_centerVertical="true" android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            <TextView android:textSize="13dp" android:textColor="@color/grey1" android:id="@+id/clock_one_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_marginStart="10dp"/>
+            <CheckBox android:id="@+id/clock_first_cb" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkbox_selector" android:layout_centerVertical="true" android:layout_marginEnd="5dp" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <View android:background="@drawable/list_line" android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp"/>
+        <RelativeLayout android:id="@+id/clock_two" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/rl_clock_second" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textSize="30dp" android:textColor="@color/gray" android:id="@+id/clock_two_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12:00" android:layout_marginStart="5dp"/>
+                <TextView android:textSize="@dimen/clock_period_text" android:textColor="@color/gray" android:id="@+id/clock_two_am_pm" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/am" android:layout_centerVertical="true" android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            <TextView android:textSize="13dp" android:textColor="@color/grey1" android:id="@+id/clock_two_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_marginStart="10dp"/>
+            <CheckBox android:id="@+id/clock_second_cb" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkbox_selector" android:layout_centerVertical="true" android:layout_marginEnd="5dp" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <View android:id="@+id/clock_two_line" android:background="@drawable/list_line" android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp"/>
+        <RelativeLayout android:id="@+id/clock_three" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/rl_clock_third" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textSize="30dp" android:textColor="@color/gray" android:id="@+id/clock_three_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12:00" android:layout_marginStart="5dp"/>
+                <TextView android:textSize="@dimen/clock_period_text" android:textColor="@color/gray" android:id="@+id/clock_three_am_pm" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/am" android:layout_centerVertical="true" android:layout_marginStart="5dp"/>
+            </LinearLayout>
+            <TextView android:textSize="13dp" android:textColor="@color/grey1" android:id="@+id/clock_three_week" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_marginStart="10dp"/>
+            <CheckBox android:id="@+id/clock_third_cb" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/checkbox_selector" android:layout_centerVertical="true" android:layout_marginEnd="5dp" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <View android:id="@+id/clock_three_line" android:background="@drawable/list_line" android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+</LinearLayout>

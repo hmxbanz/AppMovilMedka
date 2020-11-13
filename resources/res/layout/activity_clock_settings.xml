@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/setting_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:background="@color/setting_bg_color" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+            <ImageView android:id="@+id/back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/clock_setting" android:layout_toStartOf="@+id/save" android:layout_toEndOf="@+id/back"/>
+            <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:id="@+id/save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/person_name_save" android:layout_centerVertical="true" android:layout_marginStart="5dp" android:layout_marginEnd="10dp" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TimePicker android:id="@+id/timePic" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <ScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="20dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+                <RelativeLayout android:id="@+id/rl_sun" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sunday" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <ImageView android:id="@+id/iv_sun" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/rl_mon" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/monday" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <ImageView android:id="@+id/iv_mon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/rl_tue" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tuesday" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <ImageView android:id="@+id/iv_tue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/rl_wen" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wednesday" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <ImageView android:id="@+id/iv_wen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/rl_thu" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/thursday" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <ImageView android:id="@+id/iv_thu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/rl_fri" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friday" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <ImageView android:id="@+id/iv_fri" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/rl_sat" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/saturday" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <ImageView android:id="@+id/iv_sat" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cell_check" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginTop="20dp"/>
+                <RelativeLayout android:id="@+id/rl_clock_shake_time" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clock_shake_time" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <TextView android:textColor="@color/has_open" android:id="@+id/clock_shake_time_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5次" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

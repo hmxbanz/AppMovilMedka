@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="260dp" android:layout_below="@+id/rl_title">
+    <TextView android:textSize="22dp" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/body_temperature_testting"/>
+    <RelativeLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="80dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@+id/real_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gang_gang"/>
+        <TextView android:textSize="30dp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%" android:layout_alignBaseline="@+id/real_value" android:layout_toEndOf="@+id/real_value"/>
+    </RelativeLayout>
+</LinearLayout>

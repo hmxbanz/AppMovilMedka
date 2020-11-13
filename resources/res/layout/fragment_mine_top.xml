@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/ll_main" android:background="@drawable/personal_center_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/rl_person_head" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="50dp">
+        <com.yc.pedometer.customview.CircleImageView android:id="@+id/person_head" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/head_portrait_default_male" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left"/>
+        <ImageView android:id="@+id/personal_center_btn_data" android:background="@drawable/icon_right_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@+id/personal_center_btn_data" android:layout_toEndOf="@+id/person_head">
+            <TextView android:textSize="@dimen/setting_item_text_size" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/person_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/personage_name" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+            <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/white" android:id="@+id/person_motto" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding" android:text="" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

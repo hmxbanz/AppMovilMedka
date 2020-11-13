@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="horizontal" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="50dp" android:maxHeight="?android:attr/listPreferredItemHeight">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+        <ImageView android:id="@+id/icon_bracelet_interface" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_rate_setting" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left"/>
+        <TextView android:textColor="@color/text_black" android:id="@+id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left" android:layout_toEndOf="@+id/icon_bracelet_interface"/>
+        <CheckBox android:id="@+id/displayStatus" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/bracelet_interface_selector" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+        <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>

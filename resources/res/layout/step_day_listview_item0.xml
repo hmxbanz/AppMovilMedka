@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="70dp">
+    <ImageView android:id="@+id/iv_sport_type" android:background="@drawable/icon_step_frg_walk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"/>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/step_magin_left">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/sleep_text_size_big" android:textColor="@color/gray" android:id="@+id/tv_sport_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="慢走"/>
+            <TextView android:textSize="@dimen/sleep_text_size_big" android:textColor="@color/black" android:id="@+id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20:00~23:00"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+            <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/step_text_size_big2" android:textColor="@color/black" android:id="@+id/duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="27"/>
+                <TextView android:textSize="@dimen/sleep_text_size_big" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fminute"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/step_text_size_big2" android:textColor="@color/black" android:id="@+id/step" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1000"/>
+                <TextView android:textSize="@dimen/sleep_text_size_big" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/step"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/step_text_size_big2" android:textColor="@color/black" android:id="@+id/distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1.2"/>
+                <TextView android:textSize="@dimen/sleep_text_size_big" android:textColor="@color/gray" android:id="@+id/tv_distance_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kilometers"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="@dimen/step_text_size_big2" android:textColor="@color/black" android:id="@+id/calories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30"/>
+                <TextView android:textSize="@dimen/sleep_text_size_big" android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kilocalorie"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.yc.pedometer.sports.widget.AppToolBar android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" app:barTitle="@string/sportManger" app:leftRes="@drawable/icon_back_black_selector" app:rightRes="@drawable/set_black"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar">
+        <ImageView android:id="@+id/ivbg" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llHeart" android:background="@drawable/whether_bg2" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:layout_below="@+id/toolbar" android:layout_alignParentEnd="true">
+        <ImageView android:id="@+id/ivDevType" android:background="@drawable/heart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/marginLeft"/>
+        <TextView android:textColor="@color/litterGray" android:id="@+id/txtHeart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="88" android:layout_marginStart="5dp"/>
+    </LinearLayout>
+    <TextView android:textSize="45sp" android:textStyle="italic" android:textColor="@color/white" android:gravity="center" android:id="@+id/txtGo" android:background="@drawable/bg_starthastransparnt" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginBottom="40dp" android:text="GO!" android:layout_alignParentBottom="true" android:layout_centerInParent="true"/>
+    <RelativeLayout android:id="@+id/rlCount" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="@dimen/countDownFont" android:textColor="@color/white" android:gravity="center" android:id="@+id/txtCountDown" android:background="@color/main" android:layout_width="match_parent" android:layout_height="match_parent" android:text="3" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>

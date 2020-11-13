@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@drawable/body_dialog_bg" android:layout_width="300dp" android:layout_height="wrap_content" android:layout_marginTop="100dp" android:layout_marginBottom="100dp" android:layout_centerHorizontal="true">
+        <TextView android:textSize="16dp" android:textColor="@color/black" android:gravity="center" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="@string/ECG_Body_Status_Add"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_button" android:layout_width="match_parent" android:layout_height="@dimen/third_item_height" android:layout_alignParentBottom="true">
+            <Button android:textSize="16dp" android:textColor="@color/white" android:id="@+id/cancel" android:background="@drawable/ecg_button_selector" android:layout_width="match_parent" android:layout_height="35dp" android:text="@string/cancel" android:layout_weight="1" android:textAllCaps="false" android:layout_marginStart="@dimen/ecg_label_margin_leght" android:layout_marginEnd="@dimen/padding10" style="?android:attr/borderlessButtonStyle"/>
+            <Button android:textSize="16dp" android:textColor="@color/white" android:id="@+id/confirm" android:background="@drawable/ecg_button_selector" android:layout_width="match_parent" android:layout_height="35dp" android:text="@string/confirm" android:layout_weight="1" android:textAllCaps="false" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/ecg_label_margin_leght" style="?android:attr/borderlessButtonStyle"/>
+        </LinearLayout>
+        <View android:id="@+id/line" android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.1dp" android:layout_marginTop="@dimen/padding10" android:layout_above="@+id/ll_button"/>
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/line" android:layout_below="@+id/title" android:overScrollMode="never">
+            <LinearLayout android:orientation="vertical" android:id="@+id/rl" android:layout_width="300dp" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ECG_Body_Status_Title" style="@style/ecg_label_textview_style"/>
+                <View android:background="@color/ecg_normal" android:layout_width="match_parent" android:layout_height="0.1dp" android:layout_marginStart="@dimen/ecg_label_margin_leght" android:layout_marginEnd="@dimen/ecg_label_margin_leght"/>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ecg_label_margin_leght">
+                    <CheckBox android:id="@+id/CheckBox_1_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Body_Status_Good" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_1_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Body_Status_Comfortable" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_1_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Body_Status_ChestTension" style="@style/ecg_label_checkbox_style"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ecg_label_margin_leght">
+                    <CheckBox android:id="@+id/CheckBox_1_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Body_Status_Tired" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_1_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Body_Status_LackSleep" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_1_6" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Body_Status_Other" style="@style/ecg_label_checkbox_style"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ECG_Mood_Status_Title" style="@style/ecg_label_textview_style"/>
+                <View android:background="@color/ecg_normal" android:layout_width="match_parent" android:layout_height="0.1dp" android:layout_marginStart="@dimen/ecg_label_margin_leght" android:layout_marginEnd="@dimen/ecg_label_margin_leght"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ecg_label_margin_leght">
+                    <CheckBox android:id="@+id/CheckBox_2_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Mood_Status_Comfortable" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_2_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Mood_Status_Happy" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_2_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Mood_Status_Calm" style="@style/ecg_label_checkbox_style"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ecg_label_margin_leght">
+                    <CheckBox android:id="@+id/CheckBox_2_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Mood_Status_Low" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_2_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Mood_Status_Tensity" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_2_6" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Mood_Status_Anger" style="@style/ecg_label_checkbox_style"/>
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ECG_Habit_Status_Title" style="@style/ecg_label_textview_style"/>
+                <View android:background="@color/ecg_normal" android:layout_width="match_parent" android:layout_height="0.1dp" android:layout_marginStart="@dimen/ecg_label_margin_leght" android:layout_marginEnd="@dimen/ecg_label_margin_leght"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ecg_label_margin_leght">
+                    <CheckBox android:id="@+id/CheckBox_3_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Habit_Status_Exercise" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_3_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Habit_Status_Coffee" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_3_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Habit_Status_Fruit" style="@style/ecg_label_checkbox_style"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ecg_label_margin_leght">
+                    <CheckBox android:id="@+id/CheckBox_3_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Habit_Status_StayUpLate" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_3_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Habit_Status_Smokes" style="@style/ecg_label_checkbox_style"/>
+                    <CheckBox android:id="@+id/CheckBox_3_6" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Habit_Status_Drink" style="@style/ecg_label_checkbox_style"/>
+                </LinearLayout>
+                <TextView android:textColor="@color/light_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ECG_Remark" style="@style/ecg_label_textview_style"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ecg_label_margin_leght" android:minHeight="60dp" android:layout_marginStart="@dimen/ecg_label_margin_leght" android:layout_marginEnd="@dimen/ecg_label_margin_leght">
+                    <EditText android:textSize="@dimen/feedback_text_size_small" android:textColor="@color/text_gray" android:textColorHint="@color/text_gray" android:gravity="start" android:id="@+id/ECG_label_et" android:background="@drawable/ecg_label_et_bg" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="50dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</RelativeLayout>

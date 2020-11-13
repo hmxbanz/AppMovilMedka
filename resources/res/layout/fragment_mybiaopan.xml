@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/allLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/no_dial_tip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="150dp" android:layout_centerHorizontal="true">
+        <ImageView android:id="@+id/icon_no_dial_tip" android:background="@drawable/icon_no_dial_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+        <TextView android:textSize="@dimen/text_size_5" android:textColor="@color/alarm_text_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="70dp" android:text="@string/no_dial_tip" android:layout_below="@+id/icon_no_dial_tip" android:layout_centerHorizontal="true" android:layout_marginStart="@dimen/marginTop20" android:layout_marginEnd="@dimen/marginTop20"/>
+    </RelativeLayout>
+    <com.yc.pedometer.onlinedial.OnlineDialGridView android:id="@+id/xxListView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/marginTop20" android:verticalSpacing="20dp" android:numColumns="3" android:layout_above="@+id/txtEdit"/>
+    <TextView android:textSize="@dimen/font18" android:textColor="@color/white" android:gravity="center" android:id="@+id/txtEdit" android:background="@color/main" android:layout_width="match_parent" android:layout_height="@dimen/syncWatchHeight" android:text="@string/edit" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

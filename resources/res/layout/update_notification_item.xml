@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/notification_layout" android:padding="3dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/notificationImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/stat_sys_download"/>
+    <TextView android:textColor="#ff000000" android:id="@+id/notificationTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="6dp" android:layout_toEndOf="@+id/notificationImage" android:layout_alignParentEnd="true"/>
+    <TextView android:textColor="#ff000000" android:id="@+id/notificationPercent" android:paddingTop="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/notificationImage"/>
+    <ProgressBar android:id="@+id/notificationProgress" android:paddingTop="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/notificationTitle" android:layout_alignTop="@+id/notificationPercent" android:paddingStart="6dp" android:paddingEnd="3dp" android:layout_alignStart="@+id/notificationTitle" android:layout_alignParentEnd="true" style="?android:attr/progressBarStyleHorizontal"/>
+</RelativeLayout>

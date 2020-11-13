@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/history_head" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rlHead" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.yc.pedometer.sports.widget.AppToolBar android:id="@+id/toolbar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" app:barTitle="@string/history_record" app:leftRes="@drawable/icon_back_white_selector"/>
+        <com.yc.pedometer.sports.widget.EnTabLayout android:id="@+id/enhance_tab_layout" android:layout_width="match_parent" android:layout_height="@dimen/tabHeight" android:layout_below="@+id/toolbar" app:tabIndicatorColor="@color/white" app:tabIndicatorHeight="@dimen/tabPaddingHeight" app:tabIndicatorWidth="30dp" app:tabSelectTextColor="@color/white" app:tabTextAppearance="@style/TextAppearance.Holo.Small" app:tabTextColor="@color/white" app:tab_Mode="2"/>
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/viewpager_code" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/rlHead"/>
+</RelativeLayout>

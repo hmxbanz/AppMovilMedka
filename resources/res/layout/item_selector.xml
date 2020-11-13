@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rlRelativie" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.yc.pedometer.sports.widget.DigitTextView android:textSize="@dimen/sportItemSize" android:textColor="@color/white" android:id="@+id/txtValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_centerHorizontal="true"/>
+    <TextView android:textSize="@dimen/font_default_size" android:textColor="@color/sportItemLabelColor" android:id="@+id/txtLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/map_duration" android:layout_below="@+id/txtValue" android:layout_centerHorizontal="true"/>
+</RelativeLayout>

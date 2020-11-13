@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/setting_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <include android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/training_goal_toolbar"/>
+        <TextView android:textSize="20dp" android:id="@+id/choose_training_day" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/choose_training_day" android:layout_centerInParent="true"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:src="@drawable/train_set_second_step" android:layout_below="@+id/rl_title" android:layout_centerHorizontal="true"/>
+        <TextView android:textColor="@color/gray" android:id="@+id/choose_at_least_one_day_training" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/choose_at_least_one_day_training" android:layout_below="@+id/choose_training_day" android:layout_centerInParent="true"/>
+        <com.yc.pedometer.calendar.WeekDayView android:id="@+id/mWeekDayView" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="30dp" android:layout_below="@+id/choose_at_least_one_day_training"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/mWeekDayView">
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <CheckBox android:gravity="center" android:layout_gravity="center" android:id="@+id/checkSun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/train_checkbox_selector"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <CheckBox android:gravity="center" android:layout_gravity="center" android:id="@+id/checkMon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/train_checkbox_selector"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <CheckBox android:gravity="center" android:layout_gravity="center" android:id="@+id/checkTue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/train_checkbox_selector"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <CheckBox android:gravity="center" android:layout_gravity="center" android:id="@+id/checkWed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/train_checkbox_selector"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <CheckBox android:gravity="center" android:layout_gravity="center" android:id="@+id/checkThu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/train_checkbox_selector"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <CheckBox android:gravity="center" android:layout_gravity="center" android:id="@+id/checkFri" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/train_checkbox_selector"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <CheckBox android:gravity="center" android:layout_gravity="center" android:id="@+id/checkSat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/train_checkbox_selector"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.9">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_train_cycle" android:layout_centerHorizontal="true"/>
+        <Button android:textSize="@dimen/text_size_1" android:textColor="@color/white" android:gravity="center" android:id="@+id/next_step" android:background="@drawable/fillet_button_theme_color_selector" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginBottom="20dp" android:text="@string/next_step" android:layout_alignParentBottom="true" android:textAllCaps="false" android:layout_marginStart="40dp" android:layout_marginEnd="40dp" style="?android:attr/borderlessButtonStyle"/>
+    </RelativeLayout>
+</LinearLayout>

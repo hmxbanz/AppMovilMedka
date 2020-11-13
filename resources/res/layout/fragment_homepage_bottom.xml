@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/content_frame" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_connect_help" android:background="@color/setting_bg_gray" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@drawable/round_item_selector" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:layout_marginTop="@dimen/padding10" android:layout_marginBottom="@dimen/padding10" android:layout_marginStart="@dimen/back_margin_left" android:layout_marginEnd="@dimen/back_margin_left">
+            <ImageView android:id="@+id/icon_connect_help" android:layout_width="wrap_content" android:layout_height="@dimen/setting_item_height" android:src="@drawable/home_float_disconnect" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+            <ImageView android:id="@+id/iv_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_refresh" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+            <TextView android:textSize="15dp" android:textColor="@color/text_black" android:id="@+id/tv_refresh_connect_status" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/yc_connect_faile" android:layout_centerVertical="true" android:layout_marginStart="@dimen/padding10" android:layout_toStartOf="@+id/iv_refresh" android:layout_toEndOf="@+id/icon_connect_help"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/ll_body_fat_item" android:background="@drawable/round_item_selector" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_body_fat_gender" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:src="@drawable/home_icon_body_score" android:layout_marginStart="@dimen/back_margin_left"/>
+        <TextView android:textSize="20dp" android:textColor="@color/text_black" android:id="@+id/tv_body_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/back_margin_left" android:text="@string/Body_Score" android:layout_marginStart="@dimen/padding10" android:layout_toEndOf="@+id/iv_body_fat_gender"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_body_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+            <TextView android:textSize="33dp" android:textColor="@color/body_fat_normal" android:id="@+id/tv_body_score_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gang_gang"/>
+            <TextView android:textColor="@color/body_fat_normal" android:id="@+id/tv_quality_point_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Body_Unit_Score" android:layout_marginStart="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_body_fat_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/ll_body_index" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+            <TextView android:textSize="@dimen/text_size_6" android:textColor="@color/text_gray" android:id="@+id/tv_body_fat_time" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_bmi_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:layout_below="@+id/ll_body_fat_date" android:layout_marginStart="@dimen/padding10" android:layout_toEndOf="@+id/iv_body_fat_gender">
+            <TextView android:textSize="14dp" android:textColor="@color/body_fat_normal" android:id="@+id/tv_body_fat_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Body_Score_Evaluate_3"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_body_water" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="@dimen/value20" android:layout_below="@+id/ll_bmi_index">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="28dp" android:textColor="@color/text_black" android:id="@+id/tv_body_fat_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gang_gang" android:layout_marginStart="5dp"/>
+                    <ImageView android:id="@+id/tv_body_fat_up_down" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/body_arrow_up" android:layout_centerVertical="true" android:layout_marginStart="5dp" android:layout_toEndOf="@+id/tv_body_fat_value"/>
+                </RelativeLayout>
+                <TextView android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="@string/Body_Fat" android:layout_weight="1" android:layout_below="@+id/tv_body_water" android:layout_centerHorizontal="true"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="28dp" android:textColor="@color/text_black" android:id="@+id/tv_body_water" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gang_gang" android:layout_marginStart="5dp"/>
+                    <ImageView android:id="@+id/tv_body_water_up_down" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/body_arrow_up" android:layout_centerVertical="true" android:layout_marginStart="5dp" android:layout_toEndOf="@+id/tv_body_water"/>
+                </RelativeLayout>
+                <TextView android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="@string/Body_Water" android:layout_weight="1" android:layout_below="@+id/tv_body_water" android:layout_centerHorizontal="true"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_below="@+id/ll_body_water"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/ll_sport_item" android:background="@drawable/round_item_selector" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/setting_bg_color" android:id="@+id/sync_percent_step" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="100%" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+        <ImageView android:id="@+id/img_sport" android:background="@drawable/home_icon_step_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:layout_marginStart="@dimen/back_margin_left"/>
+        <TextView android:id="@+id/tv_sport" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="@string/step_count_record" android:layout_marginStart="@dimen/padding10" android:layout_toStartOf="@+id/ll_step_count" android:layout_toEndOf="@+id/img_sport" style="@style/home_interface_value_2"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_step_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+            <TextView android:textColor="@color/setting_bg_color" android:id="@+id/tv_steps_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gang_gang" style="@style/home_interface_value_1"/>
+            <TextView android:textColor="@color/setting_bg_color" android:id="@+id/tv_steps_item_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/step" android:layout_marginStart="5dp"/>
+        </LinearLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/ll_textview_sport" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_step_count" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10" android:layout_toEndOf="@+id/img_sport">
+            <TextView android:textSize="12dp" android:textColor="@color/setting_bg_color" android:id="@+id/step_goal_done_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/step"/>
+            <TextView android:textSize="12dp" android:textColor="@color/text_gray" android:id="@+id/tv_step_count_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/padding10" android:layout_below="@+id/ll_textview_sport" android:layout_alignParentEnd="true">
+            <com.yc.pedometer.customview.HomeWalkColumns android:id="@+id/stepCurveLine" android:layout_width="match_parent" android:layout_height="100dp" app:leftColor="@color/setting_bg_color" app:leftColorBottom="@color/setting_bg_color" app:selectLeftColor="@color/setting_bg_color" app:xyColor="@color/xyColor"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/ll_rate_item" android:background="@drawable/round_item_selector" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/rate_progress_color" android:id="@+id/sync_percent_rate" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="100%" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+        <RelativeLayout android:id="@+id/rl_rate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10">
+            <ImageView android:id="@+id/img_rate" android:background="@drawable/home_icon_heart_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left"/>
+            <TextView android:id="@+id/tv_rate" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/rate_record" android:layout_centerVertical="true" android:layout_marginStart="@dimen/padding10" android:layout_toStartOf="@+id/ll_rate_index" android:layout_toEndOf="@+id/img_rate" style="@style/home_interface_value_2"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_rate_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+                <TextView android:textColor="@color/rate_bg_color" android:id="@+id/tv_rate_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gang_gang" style="@style/home_interface_value_1"/>
+                <TextView android:textColor="@color/rate_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bpm_unit" android:layout_marginStart="5dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_rate_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/rl_rate" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+            <TextView android:textSize="@dimen/text_size_6" android:textColor="@color/text_gray" android:id="@+id/rate_time" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/home_interface_value_3"/>
+        </LinearLayout>
+        <com.yc.pedometer.customview.RateDetailsPointChartView android:id="@+id/mRateHomeChartView" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="130dp" android:layout_below="@+id/ll_rate_date" app:interval="50dp" app:isScroll="false" app:linecolor="@color/rate_bg_color" app:xylinecolor="@color/text_gray" app:xylinewidth="0.5dp" app:xytextcolor="@color/text_gray" app:xytextsize="@dimen/padding10"/>
+        <com.github.mikephil.charting.charts.LineChart android:id="@+id/mRateLineChar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="130dp" android:layout_below="@+id/ll_rate_date"/>
+        <View android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_below="@+id/mRateLineChar"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/ll_sleep_item" android:background="@drawable/round_item_selector" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/sleep_progress_color" android:id="@+id/sync_percent_sleep" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="100%" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+        <RelativeLayout android:id="@+id/rl_sleep_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10">
+            <ImageView android:id="@+id/img_sleep" android:background="@drawable/home_icon_sleep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left"/>
+            <TextView android:textColor="@color/text_black" android:id="@+id/tv_sleep" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/sleep_record" android:layout_centerVertical="true" android:layout_marginStart="@dimen/padding10" android:layout_toStartOf="@+id/ll_sleep_time" android:layout_toEndOf="@+id/img_sleep" style="@style/home_interface_value_2"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_sleep_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+                <TextView android:textColor="@color/sleep_bg_color" android:id="@+id/tv_sleep_hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" style="@style/home_interface_value_1"/>
+                <TextView android:textColor="@color/sleep_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hour"/>
+                <TextView android:textSize="33dp" android:textColor="@color/sleep_bg_color" android:id="@+id/tv_sleep_minute" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" style="@style/home_interface_value_1"/>
+                <TextView android:textColor="@color/sleep_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/minute"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_sleep_" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/rl_sleep_time" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10">
+            <TextView android:textSize="12dp" android:textColor="@color/text_gray" android:id="@+id/tv_sleep_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <com.yc.pedometer.customview.DaySleepPanelBarMain android:id="@+id/yc_sleep_panel_bar" android:layout_width="match_parent" android:layout_height="130dp" android:layout_marginBottom="@dimen/padding10" android:layout_below="@+id/rl_sleep_" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10"/>
+        <View android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_below="@+id/yc_sleep_panel_bar"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/ll_blood_item" android:background="@drawable/round_item_selector" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/bp_bg_color" android:id="@+id/sync_percent_bp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10" android:text="100%" android:layout_marginEnd="@dimen/back_margin_left" android:layout_alignParentEnd="true"/>
+        <RelativeLayout android:id="@+id/rl_bp_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10">
+            <ImageView android:id="@+id/img_bp" android:background="@drawable/home_icon_blood_pressure" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left"/>
+            <TextView android:id="@+id/tv_bp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bp_record" android:layout_centerVertical="true" android:layout_marginStart="@dimen/padding10" android:layout_toStartOf="@+id/ll_bp_index" android:layout_toEndOf="@+id/img_bp" style="@style/home_interface_value_2"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_bp_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+                <TextView android:textColor="@color/bp_bg_color" android:id="@+id/tv_blood_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gang_gang" style="@style/home_interface_value_1"/>
+                <TextView android:textSize="12dp" android:textColor="@color/bp_bg_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bp_value_units"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_bp_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/rl_bp_time" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+            <TextView android:textSize="@dimen/text_size_6" android:textColor="@color/text_gray" android:id="@+id/bp_time" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/home_interface_value_3"/>
+        </LinearLayout>
+        <com.yc.pedometer.customview.BpChartView android:id="@+id/mBpChartView" android:layout_width="match_parent" android:layout_height="130dp" android:layout_below="@+id/ll_bp_date" app:bgcolor="@color/white" app:interval="50dp" app:isScroll="false" app:linecolor="@color/bp_bg_color" app:xylinecolor="@color/text_gray" app:xylinewidth="0.5dp" app:xytextcolor="@color/text_gray" app:xytextsize="@dimen/padding10"/>
+        <View android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_below="@+id/mBpChartView"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_oxygen_item" android:background="@drawable/round_item_selector" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/rl_oxygen" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10">
+            <ImageView android:id="@+id/icon_oxygen" android:background="@drawable/home_icon_oxygen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left"/>
+            <TextView android:id="@+id/tv_oxygen" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/oxygen_record" android:layout_centerVertical="true" android:layout_marginStart="@dimen/padding10" android:layout_toStartOf="@+id/ll_oxygen_index" android:layout_toEndOf="@+id/icon_oxygen" style="@style/home_interface_value_2"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_oxygen_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+                <TextView android:textColor="@color/oxygen_bg_color" android:id="@+id/tv_oxygen_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gang_gang" style="@style/home_interface_value_1"/>
+                <TextView android:textColor="@color/oxygen_bg_color" android:id="@+id/oxygen_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%" android:layout_marginStart="5dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_oxygen_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/rl_oxygen" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+            <TextView android:textSize="@dimen/text_size_6" android:textColor="@color/text_gray" android:id="@+id/oxygen_time" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/home_interface_value_3"/>
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@+id/mOxygenLineChar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="130dp" android:layout_below="@+id/ll_oxygen_date"/>
+        <View android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_below="@+id/mOxygenLineChar"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/ll_ecg_item" android:background="@drawable/round_item_selector" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/rl_ecg_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10">
+            <ImageView android:id="@+id/icon_ecg" android:background="@drawable/icon_ecg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left"/>
+            <TextView android:id="@+id/tv_ecg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ECG_Title" android:layout_centerVertical="true" android:layout_marginStart="@dimen/padding10" android:layout_toStartOf="@+id/ll_ecg_index" android:layout_toEndOf="@+id/icon_ecg" style="@style/home_interface_value_2"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_ecg_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+                <TextView android:textColor="@color/ecg_normal" android:id="@+id/tv_ecg_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gang_gang" style="@style/home_interface_value_1"/>
+                <TextView android:textSize="12dp" android:textColor="@color/ecg_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ECG_HRV_Unit"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_ecg_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/rl_ecg_time" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+            <TextView android:textSize="@dimen/text_size_6" android:textColor="@color/text_gray" android:id="@+id/tv_ecg_time" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/home_interface_value_3"/>
+        </LinearLayout>
+        <com.yc.pedometer.ecg.ECGViewHome android:id="@+id/ecg_view" android:layout_width="match_parent" android:layout_height="130dp" android:layout_marginTop="@dimen/padding" android:layout_below="@+id/ll_ecg_date" android:layout_marginStart="@dimen/padding10" android:layout_marginEnd="@dimen/padding10"/>
+        <View android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_below="@+id/ecg_view"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_temperature_item" android:background="@drawable/round_item_selector" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/rl_temperature" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding10">
+            <ImageView android:id="@+id/icon_temperature" android:background="@drawable/home_icon_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_margin_left"/>
+            <TextView android:id="@+id/tv_temperature" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/temperature_record" android:layout_centerVertical="true" android:layout_marginStart="@dimen/padding10" android:layout_toStartOf="@+id/ll_temperature_index" android:layout_toEndOf="@+id/icon_temperature" style="@style/home_interface_value_2"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll_temperature_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+                <TextView android:textColor="@color/temperature_bg_color" android:id="@+id/tv_temperature_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gang_gang" style="@style/home_interface_value_1"/>
+                <TextView android:textColor="@color/temperature_bg_color" android:id="@+id/temperature_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/celsius_unit" android:layout_marginStart="5dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_temperature_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/rl_temperature" android:layout_marginEnd="@dimen/padding10" android:layout_alignParentEnd="true">
+            <TextView android:textSize="@dimen/text_size_6" android:textColor="@color/text_gray" android:id="@+id/temperature_time" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/home_interface_value_3"/>
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.LineChart android:id="@+id/mTemperatureLineChar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="130dp" android:layout_below="@+id/ll_temperature_date"/>
+        <View android:background="@color/thick_dividing_line" android:layout_width="match_parent" android:layout_height="@dimen/padding10" android:layout_below="@+id/mTemperatureLineChar"/>
+    </RelativeLayout>
+    <ImageView android:layout_gravity="center" android:id="@+id/home_icon_switch" android:background="@drawable/home_icon_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/value20" android:layout_marginBottom="@dimen/value20"/>
+</LinearLayout>

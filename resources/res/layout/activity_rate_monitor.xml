@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/setting_bg_color" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="vertical" android:background="@color/setting_bg_gray" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:orientation="horizontal" android:id="@+id/title" android:background="@color/setting_bg_color" android:layout_width="match_parent" android:layout_height="@dimen/title_item_height">
+            <ImageView android:id="@+id/setting_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_back_white_selector" android:layout_centerVertical="true" android:layout_marginStart="@dimen/back_button_margin_left"/>
+            <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/heart_rate_monitoring"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/title">
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="0.01dp" android:layout_marginTop="5dp"/>
+            <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_dynamic_rate" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="50dp">
+                <ImageView android:id="@+id/dynamic_rate_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dynamic_and_static_open" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/dynamic_rate_status">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dynamic_rate"/>
+                    <TextView android:textSize="@dimen/small" android:textColor="@color/text_gray" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dynamic_rate_description"/>
+                </LinearLayout>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/settings_margin_left"/>
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_static_heart_rate" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="50dp">
+                <ImageView android:id="@+id/static_heart_rate_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dynamic_and_static_open" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/static_heart_rate_status">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/static_heart_rate"/>
+                    <TextView android:textSize="@dimen/small" android:textColor="@color/text_gray" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/static_heart_rate_description"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/all_timed_test_rate" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <TextView android:textSize="12dp" android:textColor="@color/text_black" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/timing_test" android:layout_marginStart="@dimen/settings_margin_left"/>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_marginTop="5dp"/>
+                <RelativeLayout android:orientation="horizontal" android:id="@+id/rl_timed_test_rate" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="50dp">
+                    <CheckBox android:id="@+id/timed_test_rate_switch" android:background="@drawable/switch_on" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/timed_test_rate_switch">
+                        <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center_vertical" android:id="@+id/timed_test_rate_value" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:textSize="@dimen/small" android:textColor="@color/text_gray" android:gravity="center_vertical" android:id="@+id/timed_test_rate_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/timed_test_rate_description_02"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height"/>
+                <TextView android:textSize="12dp" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/rl_highest_rate_info" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:text="@string/rate_setting_highest_rate_info" android:layout_marginStart="@dimen/settings_margin_left"/>
+                <View android:id="@+id/rl_highest_rate_line" android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+                <RelativeLayout android:id="@+id/rl_highest_rate" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left">
+                        <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_setting_highest_rate"/>
+                    </LinearLayout>
+                    <CheckBox android:id="@+id/highest_rate_switch" android:background="@drawable/switch_on" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/rl_set_highest_rate" android:background="@drawable/selector_other_setting_item" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <ImageView android:id="@+id/personage_gender_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                    <TextView android:textColor="@drawable/selector_text_right_color" android:gravity="center" android:id="@+id/highest_rate_value" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="148" android:layout_marginEnd="5dp" android:layout_toStartOf="@+id/personage_gender_right"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:text="@string/set_highest_rate" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/highest_rate_value"/>
+                    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <TextView android:textSize="12dp" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/rl_lowest_rate_info" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:text="@string/rate_setting_lowest_rate_info" android:layout_marginStart="@dimen/settings_margin_left"/>
+                <View android:id="@+id/rl_lowest_rate_line" android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+                <RelativeLayout android:id="@+id/rl_lowest_rate" android:background="@drawable/selector_other_setting_item" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <CheckBox android:id="@+id/lowest_rate_switch" android:background="@drawable/switch_on" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/lowest_rate_switch">
+                        <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rate_setting_lowest_rate"/>
+                    </LinearLayout>
+                    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/rl_set_lowest_rate" android:background="@drawable/selector_other_setting_item" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <ImageView android:id="@+id/personage_gender_right2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                    <TextView android:textColor="@drawable/selector_text_right_color" android:gravity="center" android:id="@+id/lowest_rate_value" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="148" android:layout_marginEnd="5dp" android:layout_toStartOf="@+id/personage_gender_right2"/>
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height" android:text="@string/set_lowest_rate" android:layout_marginStart="@dimen/settings_margin_left" android:layout_toStartOf="@+id/lowest_rate_value"/>
+                    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/rl_heart_rate_detection_and_calibration" android:background="@drawable/selector_other_setting_item" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+                    <TextView android:textSize="@dimen/text_size_1" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="@dimen/setting_item_height" android:text="@string/heart_rate_detection_and_calibration" android:layout_marginStart="@dimen/settings_margin_left"/>
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_right" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/settings_margin_left" android:layout_alignParentEnd="true"/>
+                    <View android:background="@color/gray_line" android:layout_width="match_parent" android:layout_height="@dimen/line_height" android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

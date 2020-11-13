@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="260dp" android:layout_below="@+id/rl_title">
+    <RelativeLayout android:id="@+id/rl_calendar" android:layout_width="match_parent" android:layout_height="@dimen/setting_item_height">
+        <TextView android:textSize="@dimen/tittle_text_size_1" android:textColor="@color/white" android:id="@+id/tv_calendar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2019/07/11" android:layout_centerInParent="true"/>
+        <ImageView android:id="@+id/calendar_back" android:paddingTop="@dimen/padding" android:paddingBottom="@dimen/padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/calendar_back_temperature_normal" android:layout_centerVertical="true" android:paddingStart="@dimen/value20" android:paddingEnd="@dimen/value20" android:layout_toStartOf="@+id/tv_calendar"/>
+        <ImageView android:id="@+id/calendar_ahead" android:paddingTop="@dimen/padding" android:paddingBottom="@dimen/padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/calendar_ahead_temperature_normal" android:layout_centerVertical="true" android:paddingStart="@dimen/value20" android:paddingEnd="@dimen/value20" android:layout_toEndOf="@+id/tv_calendar"/>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.github.mikephil.charting.charts.LineChart android:id="@+id/mOxygenLineChar" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginTop="@dimen/value20"/>
+    </RelativeLayout>
+</LinearLayout>
